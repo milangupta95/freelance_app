@@ -2,14 +2,14 @@ import * as React from 'react';
 import { CiPhone } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
-
+import Image from 'next/image';
 export const Footer = () => {
     return (
         <div className='w-full py-8 bg-white'>
             <div className='h-[20px] bg-white'></div>
             <div>
                 <div className='space-x-10 border-b border-white flex justify-center bg-gray-700 p-4'>
-                    <img src='/images/logo2.png' className='w-[120px] h-[100px]' />
+                    <Image width={120} height={100} src='/images/logo2.png'/>
 
                     <div className='space-y-2'>
                         <h1 className='text-[#FFAB2E] font-bold'>Company</h1>

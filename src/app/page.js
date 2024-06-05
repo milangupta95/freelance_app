@@ -36,8 +36,8 @@ export default function Home() {
         <div className="flex w-[40%] items-center">
           {/* First Image */}
           <div className="w-full max-w-sm mb-6">
-            <img
-              src="images/image-1.jpg"
+            <Image
+              src="/images/image-1.jpg"
               alt="Team hands"
               width={300}
               height={550}
@@ -45,8 +45,8 @@ export default function Home() {
           </div>
           {/* Second Image */}
           <div className="w-full max-w-xs align-bottom ml-[-200px] mt-[400px]">
-            <img
-              src="images/image-2.jpg"
+            <Image
+              src="/images/image-2.jpg"
               alt="Team meeting"
               width={400}
               height={222}
@@ -58,7 +58,7 @@ export default function Home() {
           <h1 className="px-2 text-[#F19F1F] text-[36px]">Lorem ipsum dolor sit ame</h1>
 
           <p className="text-[16px] text-[#3F444]">
-            Intelli Vectra stands as a technology and vendor-agnostic solution provider. Our client relationships are fiduciary, dedicated to safeguarding their best interests as we drive business transformation through innovation and engagement. Embracing a holistic approach, we navigate diverse technological landscapes to deliver bespoke solutions tailored to each client's unique needs. Our commitment extends beyond mere consultation; we actively collaborate with clients, fostering an environment of mutual growth and success. By prioritizing innovation and fostering meaningful engagement, we empower businesses to adapt, thrive, and seize new opportunities in an ever-evolving digital ecosystem.
+            Intelli Vectra stands as a technology and vendor-agnostic solution provider. Our client relationships are fiduciary, dedicated to safeguarding their best interests as we drive business transformation through innovation and engagement. Embracing a holistic approach, we navigate diverse technological landscapes to deliver bespoke solutions tailored to each clients unique needs. Our commitment extends beyond mere consultation; we actively collaborate with clients, fostering an environment of mutual growth and success. By prioritizing innovation and fostering meaningful engagement, we empower businesses to adapt, thrive, and seize new opportunities in an ever-evolving digital ecosystem.
           </p>
 
           <Button buttonText={"Learn More"} />
@@ -71,7 +71,7 @@ export default function Home() {
         <p className="text-gray-600 mb-6 font-light text-2xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
 
         <div className="flex items-center justify-center">
-          <img src="/images/solutionandservices.jpg" alt="Solutions & Services" className="w-[600px] object-cover rounded-full" />
+          <Image width={600} height={600} src="/images/solutionandservices.jpg" alt="Solutions & Services"/>
         </div>
       </div>
 
@@ -114,23 +114,23 @@ export default function Home() {
 
         <div className="flex space-y-6 flex-col justify-center">
           <div className="space-x-6 flex w-full justify-center">
-            <img src="/images/tp1.png" />
-            <img src="/images/tp2.png" />
-            <img src="/images/tp3.png" />
-            <img src="/images/tp4.png" />
+            <Image alt="" height={100} width={100} src="/images/tp1.png" />
+            <Image alt="" height={100} width={100} src="/images/tp2.png" />
+            <Image alt="" height={100} width={100} src="/images/tp3.png" />
+            <Image alt="" height={100} width={100} src="/images/tp4.png" />
           </div>
           <div className="space-x-6 flex w-full justify-center">
-            <img src="/images/tp5.png" />
-            <img src="/images/tp6.png" />
-            <img src="/images/tp7.png" />
-            <img src="/images/tp8.png" />
-            <img src="/images/tp9.png" />
+            <Image alt="" height={100} width={100} src="/images/tp5.png" />
+            <Image alt="" height={100} width={100} src="/images/tp6.png" />
+            <Image alt="" height={100} width={100} src="/images/tp7.png" />
+            <Image alt="" height={100} width={100} src="/images/tp8.png" />
+            <Image alt="" height={100} width={100} src="/images/tp9.png" />
           </div>
           <div className="space-x-6 flex w-full justify-center">
-            <img src="/images/tp10.png" />
-            <img src="/images/tp11.png" />
-            <img src="/images/tp12.png" />
-            <img src="/images/tp13.png" />
+            <Image alt="" height={100} width={100} src="/images/tp10.png" />
+            <Image alt="" height={100} width={100} src="/images/tp11.png" />
+            <Image alt="" height={100} width={100} src="/images/tp12.png" />
+            <Image alt="" height={100} width={100} src="/images/tp13.png" />
           </div>
         </div>
       </div>
