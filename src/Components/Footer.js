@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className='w-full py-8 bg-white'>
             <div className='h-[20px] bg-white'></div>
             <div>
-                <div className='space-x-10 border-b border-white flex justify-center bg-gray-700 p-4'>
+                <div className='space-x-10 border-b border-white flex justify-center bg-[#343A40] p-4'>
                     <Image width={120} height={100} src='/images/logo2.png'/>
 
                     <div className='space-y-2'>

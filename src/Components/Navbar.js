@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IoIosArrowDown } from "react-icons/io";
+import Image from 'next/image';
 
 export const Navbar = () => {
     const classActive = "flex items-center pb-2 space-x-4 text-[#FFAB2E] px-2 border-b-2 border-[#FFAB2E]";
@@ -7,7 +8,7 @@ export const Navbar = () => {
   return (
     <div className='bg-white h-[70px] p-4 w-full flex justify-between items-center'>
         <div>
-            <img src='/images/logo.png' className='w-[200px] h-[40px]'/>
+            <Image height={40} width={200} src='/images/logo.png'/>
         </div>
         <div>
             <ul className='flex space-x-6 *:cursor-pointer list-style-none text-gray-600'>
