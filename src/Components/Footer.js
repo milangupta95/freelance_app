@@ -3,13 +3,21 @@ import { CiPhone } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import Image from 'next/image';
+import { SocialIcon } from './ui/SocialIcon';
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+
 export const Footer = () => {
     return (
-        <div className='w-full py-8 bg-white'>
+        <div className='w-full bg-white'>
             <div className='h-[20px] bg-white'></div>
-            <div>
-                <div className='space-x-10 border-b border-white flex justify-center bg-[#343A40] p-4'>
-                    <Image width={120} height={100} src='/images/logo2.png'/>
+            <div className='bg-[#343A40]'>
+                <div className='space-x-10 py-8 border-b p-4 border-white flex justify-center'>
+                    <div>
+                        <Image src='/images/logo2.png' height={40} width={150} />
+                    </div>
+
 
                     <div className='space-y-2'>
                         <h1 className='text-[#FFAB2E] font-bold'>Company</h1>
@@ -56,6 +64,25 @@ export const Footer = () => {
                     </div>
                 </div>
 
+                <div className='h-full bg-[#343A40] p-4 flex items-center justify-between'>
+                    <p>© 2024 Intelli Vectra Technologies Pvt. Ltd. All rights reserved.</p>
+                    <ul className='flex list-style-none items-center space-x-4'>
+                        <li>Terms</li>
+                        <li>Privacy</li>
+                        <li>Cookies</li>
+                    </ul>
+                    <div className='flex items-center space-x-4 text-white'>
+                        <SocialIcon>
+                            <FaLinkedin size={20}/>
+                        </SocialIcon>
+                        <SocialIcon>
+                            <FaFacebook size={20}/>
+                        </SocialIcon>
+                        <SocialIcon>
+                            <FaTwitter size={20}/>
+                        </SocialIcon>
+                    </div>
+                </div>
             </div>
         </div>
     )
