@@ -10,7 +10,7 @@ export const Navbar = () => {
 
     console.log('Current path:', pathname);
     const classActive = "flex items-center pb-2 space-x-4 text-[#FFAB2E] px-2 border-b-2 border-[#FFAB2E]";
-    const classUnActive = "flex items-center pb-2 space-x-4 transition-all px-2 duration-300 hover:text-[#FFAB2E] hover:border-b-2 hover:border-[#FFAB2E]";
+    const classUnActive = "flex items-center pb-2 space-x-4 text-black transition-all px-2 duration-300 hover:text-[#FFAB2E] hover:border-b-2 hover:border-[#FFAB2E]";
   return (
     <div className='bg-white h-[70px] p-4 w-full flex justify-between items-center'>
         <div>

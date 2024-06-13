@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home() {
   const classActive = "border-b-2 px-6 border-[#FFAB2E] h-full items-center flex";
   return (
-    <div className="h-min-[100vh] bg-white">
+    <div className="h-min-[100vh] space-y-[30px] bg-white">
       {
         // Starter Layout
       }
@@ -17,10 +17,8 @@ export default function Home() {
               <span className="text-[#F19F1F]">BUSINESS</span>
               <span className="text-white"> & ENTERPRISE HUB</span>
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              <br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-              Ut enim ad minim veniam
+            <p className="w-[45%]">
+              Simplify complexity and drive digital transformation with Intelli Vectra Technologies’ innovative IT solutions for sustainable business growth.
             </p>
           </div>
           <div>
@@ -55,10 +53,11 @@ export default function Home() {
         </div>
         <div className="h-full items-center w-[50%] space-y-6">
           <h1 className="px-2 border-l-2 text-black text-[16px] font-bold border-[#F19F1F]">ABOUT US</h1>
-          <h1 className="px-2 text-[#F19F1F] text-[36px]">Lorem ipsum dolor sit ame</h1>
+          <h1 className="px-2 text-[#F19F1F] text-[36px]">Empowering Digital Transformation with Innovative IT Solutions</h1>
 
-          <p className="text-[16px] text-[#3F444]">
-            Intelli Vectra stands as a technology and vendor-agnostic solution provider. Our client relationships are fiduciary, dedicated to safeguarding their best interests as we drive business transformation through innovation and engagement. Embracing a holistic approach, we navigate diverse technological landscapes to deliver bespoke solutions tailored to each clients unique needs. Our commitment extends beyond mere consultation; we actively collaborate with clients, fostering an environment of mutual growth and success. By prioritizing innovation and fostering meaningful engagement, we empower businesses to adapt, thrive, and seize new opportunities in an ever-evolving digital ecosystem.
+          <p className="text-[18px] text-[#3F444]">
+            Intelli Vectra Technologies is a leading IT solutions provider dedicated to helping clients harness technology innovation and simplify IT complexities. Our mission is to enable digital transformation and maximize return on IT investment. By leveraging cutting-edge technologies and delivering tailored solutions, Intelli Vectra Technologies empowers businesses to stay ahead in the rapidly evolving digital landscape. Our expertise spans across various domains, ensuring that our clients achieve operational efficiency, enhanced security, and sustainable growth
+
           </p>
 
           <Button buttonText={"Learn More"} />
@@ -70,13 +69,9 @@ export default function Home() {
         <h1 className="text-5xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
         <p className="text-gray-600 mb-6 font-light text-2xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
 
-        <div className="flex items-center justify-center">
-          <Image width={600} height={600} src="/images/solutionandservices.jpg" alt="Solutions & Services"/>
+        <div className="flex items-center justify-center rounded-[50%]">
+          <Image className="rounded-[50%]" width={500} height={500} src="/images/solutionandservices.jpg" alt="Solutions & Services" />
         </div>
-      </div>
-
-      <div className="h-[10vh]">
-
       </div>
       <div className="text-black space-y-10">
         <div>
@@ -103,40 +98,33 @@ export default function Home() {
             description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
         </div>
       </div>
-      <div className="bg-white h-[8vh]">
-
-      </div>
       <div className="w-full text-gray-600 space-y-10 bg-[#FFFAF2] py-12 flex flex-col">
         <div className="w-full space-y-2">
           <h1 className="text-4xl text-center">Technology <span className="text-[#FFAB2E]">Partners</span></h1>
           <p className="text-center text-xl tracking-wide">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
         </div>
 
-        <div className="flex space-y-6 flex-col justify-center">
-          <div className="space-x-6 flex w-full justify-center">
+        <div className="flex space-y-16 flex-col justify-center">
+          <div className="space-x-32 flex w-full justify-center">
             <Image alt="" height={100} width={100} src="/images/tp1.png" />
             <Image alt="" height={100} width={100} src="/images/tp2.png" />
             <Image alt="" height={100} width={100} src="/images/tp3.png" />
             <Image alt="" height={100} width={100} src="/images/tp4.png" />
           </div>
-          <div className="space-x-6 flex w-full justify-center">
+          <div className="space-x-32 flex w-full justify-center">
             <Image alt="" height={100} width={100} src="/images/tp5.png" />
             <Image alt="" height={100} width={100} src="/images/tp6.png" />
             <Image alt="" height={100} width={100} src="/images/tp7.png" />
             <Image alt="" height={100} width={100} src="/images/tp8.png" />
             <Image alt="" height={100} width={100} src="/images/tp9.png" />
           </div>
-          <div className="space-x-6 flex w-full justify-center">
+          <div className="space-x-32 flex w-full justify-center">
             <Image alt="" height={100} width={100} src="/images/tp10.png" />
             <Image alt="" height={100} width={100} src="/images/tp11.png" />
             <Image alt="" height={100} width={100} src="/images/tp12.png" />
             <Image alt="" height={100} width={100} src="/images/tp13.png" />
           </div>
         </div>
-      </div>
-
-      <div className="h-[8vh] bg-white">
-
       </div>
       <div className="text-gray-600 w-full space-y-4 flex flex-col justify-between items-center">
         <h1 className="text-4xl text-center">Content <span className="text-[#FFAB2E]">Hub</span></h1>
@@ -148,9 +136,9 @@ export default function Home() {
         </ul>
 
         <div className="flex space-x-10 items-center justify-center">
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"}/>
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"}/>
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"}/>
+          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
+          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
+          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
         </div>
       </div>
 

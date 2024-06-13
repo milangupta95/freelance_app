@@ -1,8 +1,15 @@
+'use client'
 import { PageStarter } from '@/Components/PageStarter';
 import * as React from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Page() {
+  const [name,setName] = React.useState("")
+  const [email,setEmail] = React.useState("")
+  const [phone,setPhone] = React.useState("")
+  const [subject,setSubject] = React.useState("")
+  const [message,setMessage] = React.useState("")
   return (
     <div>
       <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"}></PageStarter>
@@ -15,7 +22,30 @@ export default function Page() {
             <div className='h-[100px] shadow-lg w-[250px] bg-white rounded-lg'></div>
             <div className='h-[100px] shadow-lg w-[250px] bg-white rounded-lg'></div>
           </div>
-          <div className='bg-white shadow-lg rounded-lg w-[70%] h-[420px]'></div>
+          <div className='bg-white shadow-lg space-y-8 text-black p-4 py-8 rounded-lg w-[70%] h-[420px]'>
+            <div>
+              <h1 className='text-3xl font-extralight'>Send Message</h1>
+              <p className='text-xl font-extralight'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
+            </div>
+            <div>
+              <form className='space-y-4'>
+                <div className='flex items-center justify-between'>
+                  <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="name" />
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="email" />
+                </div>
+                <div className='flex items-center justify-between'>
+                  <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="phone" />
+                  <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Subject' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="subject" />
+                </div>
+                <div>
+                  <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message' rows={3} className='w-full p-2 font-extralight col-span-4 border border-black '></textarea>
+                </div>
+                <div className='flex items-center justify-end'>
+                  <button className='p-4 bg-[#F19F1F] tracking-wide text-white'>Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
