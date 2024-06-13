@@ -106,23 +106,23 @@ export default function Home() {
 
         <div className="flex space-y-16 flex-col justify-center">
           <div className="space-x-32 flex w-full justify-center">
-            <Image alt="" height={100} width={100} src="/images/tp1.png" />
-            <Image alt="" height={100} width={100} src="/images/tp2.png" />
-            <Image alt="" height={100} width={100} src="/images/tp3.png" />
-            <Image alt="" height={100} width={100} src="/images/tp4.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp1.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp2.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp3.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp4.png" />
           </div>
           <div className="space-x-32 flex w-full justify-center">
-            <Image alt="" height={100} width={100} src="/images/tp5.png" />
-            <Image alt="" height={100} width={100} src="/images/tp6.png" />
-            <Image alt="" height={100} width={100} src="/images/tp7.png" />
-            <Image alt="" height={100} width={100} src="/images/tp8.png" />
-            <Image alt="" height={100} width={100} src="/images/tp9.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp5.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp6.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp7.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp8.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp9.png" />
           </div>
           <div className="space-x-32 flex w-full justify-center">
-            <Image alt="" height={100} width={100} src="/images/tp10.png" />
-            <Image alt="" height={100} width={100} src="/images/tp11.png" />
-            <Image alt="" height={100} width={100} src="/images/tp12.png" />
-            <Image alt="" height={100} width={100} src="/images/tp13.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp10.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp11.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp12.png" />
+            <Image alt="Technology Partner" height={100} width={100} src="/images/tp13.png" />
           </div>
         </div>
       </div>
