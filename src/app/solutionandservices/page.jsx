@@ -2,79 +2,11 @@
 import { PageStarter } from "@/Components/PageStarter"
 import Image from "next/image";
 import { useState } from "react";
+import { jsonforServices } from "@/data";
+import Link from "next/link";
 
 export default function Page() {
-    const jsonforServices = [
-        [
-            {
-                "service_id": 1,
-                "service_name": "DATACENTER DESIGN & OPTIMIZATION",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/datacenter.jpg"
-            },
-            {
-                "service_id": 2,
-                "service_name": "IT SECURITY SOLUTION",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/itsecsol.jpg"
-            },
-            {
-                "service_id": 3,
-                "service_name": "CLOUD SOLUTIONS",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/coludsoln.jpg"
-            },
-            {
-                "service_id": 4,
-                "service_name": "COLLABORATION & DIGITAL WORKPLACE",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/datacenter.jpg"
-            }
-        ],
-        [
-            {
-                "service_id": 8,
-                "service_name": "IT LIFESTYLE MANAGEMENT",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/datacenter.jpg"
-            },
-            {
-                "service_id": 9,
-                "service_name": "IT SECURITY AUDIT SERVICES",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/itsecsol.jpg"
-            },
-            {
-                "service_id": 10,
-                "service_name": "CLOUD TRANSFORMATION",
-                "description": "Consectetur adipiscing elit dolore magna aliqua ipiscing elit dolore magna aliqua",
-                "pic_url": "/images/services/coludsoln.jpg"
-            }
-        ],
-        [
-            {
-                "service_id": 5,
-                "service_name": "PERMANENT HIRING",
-                "description": "Seamless recruitment processes to secure permanent talent perfectly suited to organizational needs.",
-                "pic_url": "/images/services/permanenthiring.jpg"
-            },
-            {
-                "service_id": 6,
-                "service_name": "CONTRACT CONSULTANT",
-                "description": "Get full access of top-tier IT expertise on a flexible basis to support project-specific requirements.",
-                "pic_url": "/images/services/contractconsultant.jpg"
-            },
-            {
-                "service_id": 7,
-                "service_name": "RECRUITING OUTSOURCING",
-                "description": "Outsourcing of the recruitment process to expert professionals for efficient and effective candidate selection.",
-                "pic_url": "/images/services/recruitoutsourcing.jpg"
-            }
-        ],
-        
-    ];
-
-    const [activeServIdx, setActiveServIdx] = useState(0);
+    const [activeServIdx, setActiveServIdx] = useState("technology");
     const classActive = "border-b-2 cursor-pointer px-6 border-[#FFAB2E] h-full items-center flex";
     const classUnactive = "hover:border-b-2 cursor-pointer hover:border-[#FFAB2E] px-6 items-center flex h-full"
     return (
@@ -99,34 +31,32 @@ export default function Page() {
             <div className="text-gray-600 w-full space-y-4 flex flex-col justify-between items-center">
                 <ul className="w-full flex space-x-40 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
                     <li onClick={() => {
-                        setActiveServIdx(0)
-                    }} className={activeServIdx === 0 ? classActive : classUnactive}>Technologies Solutions</li>
+                        setActiveServIdx("technology")
+                    }} className={activeServIdx === "technology" ? classActive : classUnactive}>Technologies Solutions</li>
                     <li onClick={() => {
-                        setActiveServIdx(1)
-                    }} className={activeServIdx === 1 ? classActive : classUnactive}>Professional IT Services</li>
+                        setActiveServIdx("pit")
+                    }} className={activeServIdx === "pit" ? classActive : classUnactive}>Professional IT Services</li>
                     <li onClick={() => {
-                        setActiveServIdx(2)
-                    }} className={activeServIdx === 2 ? classActive : classUnactive}>IT Staffing Services</li>
+                        setActiveServIdx("staffing")
+                    }} className={activeServIdx === "staffing" ? classActive : classUnactive}>IT Staffing Services</li>
                 </ul>
             </div>
 
             <div className="bg-white py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 {
-                    jsonforServices[activeServIdx].map((service) => {
+                    jsonforServices.filter((serv) =>  serv.type === activeServIdx ).map((service) => {
                         return (
-                            
-                                <div className="shadow-lg w-[70%] p-4 space-y-4 rounded-lg">
-                                    <div className="relative w-full h-[250px]">
-                                        <Image src={service.pic_url} layout="fill"></Image>
-                                    </div>
-                                    <h1 className="text-[#FFAB2E]">{service.service_name}</h1>
-                                    <p className="text-black">
-                                        {service.description}
-                                    </p>
-                                    <button className="bg-[#FFAB2E] p-4">Learn More</button>
-                                </div>
-                            
-                        )
+                <div className="shadow-lg w-[70%] p-4 space-y-4 rounded-lg">
+                    <div className="relative w-full h-[250px]">
+                        <Image src={service.heading_pic_url} layout="fill"></Image>
+                    </div>
+                    <h1 className="text-[#FFAB2E]">{service.service_name}</h1>
+                    <p className="text-black">
+                        {service.short_description}
+                    </p>
+                    <Link href={`/solutionandservices/${service.service_id}`}><button className="bg-[#FFAB2E] p-4">Learn More</button></Link>
+                </div>
+                )
                     })
                 }
             </div>
