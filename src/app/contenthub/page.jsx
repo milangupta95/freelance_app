@@ -106,7 +106,7 @@ export default function Page() {
     const nonCurrPageStyle = "px-3 py-1 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300"
     return (
         <div className="bg-white space-y-4">
-            <PageStarter tit1={"Blog"} tit2={""} tit1Col={"black"} descColor={"black"} imageSrc={"/images/blogsHeader.jpg"}></PageStarter>
+            <PageStarter tit1={"Blog"} tit2={""} tit1Col={"black"} descColor={"black"} imageSrc={"/images/blogsHeader.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
             <div className="flex p-4 bg-white items-center justify-center space-x-4">
                 <input value={searchText} onChange={(e) => setSearchText(e.target.value)} type="text" className="bg-[#FFF4E3] border p-2 text-black w-[500px]" placeholder="Search" />
                 <select value={category} onChange={(e) => setCategory(e.target.value)} className="bg-[#FFF4E3] border p-2 text-black w-[200px]">

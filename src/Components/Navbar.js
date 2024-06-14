@@ -22,9 +22,9 @@ export const Navbar = () => {
                 <Link href ="/about"><li className={`${pathname === '/about' ? classActive : classUnActive}`}>About us</li></Link>
                 <Link href="/solutionandservices"><li className={`${pathname === '/solutionandservices' ? classActive : classUnActive}`}>Solution And Services <span><IoIosArrowDown></IoIosArrowDown></span> 
                 </li></Link>
-                <Link href="contenthub"><li className={`${pathname === '/contenthub' ? classActive : classUnActive}`}>Content Hub<span><IoIosArrowDown/></span></li></Link>
+                <Link href="/contenthub"><li className={`${pathname === '/contenthub' ? classActive : classUnActive}`}>Content Hub<span><IoIosArrowDown/></span></li></Link>
                 <Link href="/carrers"><li className={`${pathname === '/carrers' ? classActive : classUnActive}`}>Carrers</li></Link>
-                <Link href="contactus"><li className={`${pathname === '/contactus' ? classActive : classUnActive}`}>Contact Us</li></Link>
+                <Link href="/contactus"><li className={`${pathname === '/contactus' ? classActive : classUnActive}`}>Contact Us</li></Link>
             </ul>
         </div>
     </div>

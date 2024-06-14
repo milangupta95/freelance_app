@@ -17,7 +17,7 @@ export default function Home() {
               <span className="text-[#F19F1F]">BUSINESS</span>
               <span className="text-white"> & ENTERPRISE HUB</span>
             </h1>
-            <p className="w-[45%]">
+            <p className="w-[45%] text-white">
               Simplify complexity and drive digital transformation with Intelli Vectra Technologies’ innovative IT solutions for sustainable business growth.
             </p>
           </div>

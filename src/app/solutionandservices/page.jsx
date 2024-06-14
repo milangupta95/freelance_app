@@ -79,7 +79,7 @@ export default function Page() {
     const classUnactive = "hover:border-b-2 cursor-pointer hover:border-[#FFAB2E] px-6 items-center flex h-full"
     return (
         <div>
-            <PageStarter tit1={"Solution and Services"} tit2={""} tit1Col={"white"} descColor={"white"} imageSrc={"/images/solutionservicesHeader.jpg"}></PageStarter>
+            <PageStarter desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"} tit1={"Solution and Services"} tit2={""} tit1Col={"white"} descColor={"white"} imageSrc={"/images/solutionservicesHeader.jpg"}></PageStarter>
             <div className="w-full p-8 px-10 space-x-20 bg-white text-black items-center justify-center flex">
                 <div className="flex w-[40%] items-center">
                     <Image

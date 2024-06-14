@@ -13,7 +13,7 @@ const Page = () => {
     const [coverletter,setCoverLetter] = useState("");
     return (
         <div className="">
-            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/carrerheader.jpg"} />
+            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/carrerheader.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}/>
             <div className='bg-[#FFFAF2] p-4 text-black w-full flex items-center justify-center space-x-16'>
                 <div className="w-[30%] h-[85vh] relative">
                     <Image src="/images/wearehiring.png" layout="fill"></Image>

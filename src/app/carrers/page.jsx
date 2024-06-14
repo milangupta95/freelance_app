@@ -11,7 +11,7 @@ export default function Page() {
 
     return (
         <div>
-            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/carrerheader.jpg"} />
+            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/carrerheader.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}/>
             <div className="h-[5vh] bg-white"></div>
 
             <div className="flex flex-col w-[100vw] justify-center items-center space-y-4 bg-white">
