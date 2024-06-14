@@ -1,17 +1,40 @@
+'use client'
 import { PageStarter } from "@/Components/PageStarter";
 import Image from "next/image";
 import { Button } from "@/Components/ui/Button";
-
+import EmblaCarousel from "@/Components/Corousel/EmblaCarousel";
 export default function Page() {
+    const slides = [
+        {
+            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            image_src: "/images/slider1image.png",
+            heading: "Duis aute irure dolor"
+        },
+        {
+            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            image_src: "/images/slide2image.png",
+            heading: "irure dolor"
+        },
+        {
+            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            image_src: "/images/slide3image.png",
+            heading: "Duis aute"
+        },
+    ]
+    const OPTIONS = {
+        loop: true
+    }
+    const SLIDE_COUNT = 5
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
     return (
-        <div>
-            <PageStarter tit1Col={"black"} tit1={"About"} tit2={" Us"} imageSrc={"/images/aboutusheader.jpg"} descColor={"black"} />
+        <div className='space-y-[30px] bg-white'>
+            <PageStarter tit1Col={"black"} tit1={"About"} tit2={" Us"} imageSrc={"/images/aboutusheader.jpg"} descColor={"black"} desc={"Intelli Vectra Technologies offers comprehensive Digital Infrastructure, Business Analytics, Cloud, Security, and Emerging solutions that empower SMEs, enterprises, and government clients to unlock new digital revenue opportunities, enhance customer experiences across channels, and gain valuable data insights."} />
 
             <div className="w-full px-10 space-x-20 bg-white text-black items-center justify-center flex">
-                <div className="flex w-[40%] items-center">
+                <div className="flex relative w-[40%] h-[600px] items-center">
                     <Image
-                        height={400}
-                        width={400}
+                        layout="fill"
                         src={`/images/aboutusGroup.jpg`}
                     />
                 </div>
@@ -20,20 +43,28 @@ export default function Page() {
                     <h1 className="px-2 text-[#F19F1F] text-[36px]">Welcome to IVT</h1>
 
                     <p className="text-[16px] text-[#3F444]">
-                        Intelli Vectra stands as a technology and vendor-agnostic solution provider. Our client relationships are fiduciary, dedicated to safeguarding their best interests as we drive business transformation through innovation and engagement. Embracing a holistic approach, we navigate diverse technological landscapes to deliver bespoke solutions tailored to each clients unique needs. Our commitment extends beyond mere consultation; we actively collaborate with clients, fostering an environment of mutual growth and success. By prioritizing innovation and fostering meaningful engagement, we empower businesses to adapt, thrive, and seize new opportunities in an ever-evolving digital ecosystem.
+                        Intelli Vectra Technologies offers comprehensive Digital Infrastructure, Business Analytics, Cloud, Security, and Emerging solutions that empower SMEs, enterprises, and government clients to unlock new digital revenue opportunities, enhance customer experiences across channels, and gain valuable data insights. Our strong partnerships with top technology providers enable us to deliver solutions that align IT investments with business goals, making technology work harder and smarter for our clients.
                     </p>
-
+                    <p className="text-[16px] text-[#3F444]">
+                        Our mission is to drive economic value for our clients by guiding their digital transformation with world-class, secure, agile, and cloud-ready infrastructure solutions. We provide expert services throughout the entire lifecycle, including strategy, consulting, design, implementation, and ongoing support.
+                    </p>
+                    <p className="text-[16px] text-[#3F444]">
+                        Staying at the forefront of IT advancements, we ensure our clients benefit from a wide array of technologies and leading-edge solutions. Collaborating with both established market leaders and innovative emerging providers, we deliver tailored, integrated, and multi-technology solutions that meet the unique needs of each client.
+                    </p>
                     <Button buttonText={"Learn More"} />
                 </div>
             </div>
 
             <div className="bg-[#FFFAF2] w-full p-16">
-                <div className="h-[70vh] space-y-2 bg-[#F19F1F] bg-blend-darken p-4" style={{ backgroundImage: "url('images/business-network-background-connecting-dots-technology-design 2.png')" }}>
-                    <h1 className="text-center text-black text-4xl font-extralight"><span className="text-white">Our</span> Journey</h1>
-                    <p className="text-center text-[#3F444D] font-extralight">Embark on a seamless journey with our IT services.</p>
-                </div>
+                <div className="h-[70vh] space-y-16 bg-[#F19F1F] bg-blend-darken p-4" style={{ backgroundImage: "url('images/business-network-background-connecting-dots-technology-design 2.png')" }}>
+                    <div className='space-y-2'>
+                        <h1 className="text-center text-black text-4xl font-extralight"><span className="text-white">Our</span> Journey</h1>
+                        <p className="text-center text-[#3F444D] font-extralight">Embark on a seamless journey with our IT services.</p>
+                    </div>
+                    <EmblaCarousel slides={slides} options={OPTIONS}>
 
-                {/* Here Corousel will be Placed */}
+                    </EmblaCarousel>
+                </div>
             </div>
 
             <div className="p-8 bg-white space-y-2 flex flex-col justify-center">
@@ -57,9 +88,9 @@ export default function Page() {
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <div className="relative h-[410px] w-[80%]">
+                    <div className="relative h-[600px] w-[90%]">
                         <Image src="/images/ourprocess.png" layout="fill"></Image>
-                        <div className="space-y-[225px]">
+                        <div className="space-y-[400px]">
                             <div className="flex justify-center">
                                 <div className="w-[300px]">
                                     <h1 className="text-lg text-center font-semibold">Consult & Envision</h1>
@@ -92,13 +123,14 @@ export default function Page() {
                     <div className="p-16 bg-[#FFFAF2] w-[50%] space-y-6">
                         <h1 className="text-4xl tracking-widest font-extralight">Our <span className="text-[#F19F1F]">Mission</span></h1>
                         <p className="text-xl font-extralight tracking-widest">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            At Intelli Vectra Solutions, our mission is to revolutionize the digital landscape by providing innovative IT solutions that empower businesses to thrive in the modern era. We are committed to simplifying complexities, driving digital transformation, and maximizing value for our clients.
+
                         </p>
                     </div>
                     <div className="p-16 bg-[#FFFAF2] w-[50%] space-y-6">
                         <h1 className="text-4xl tracking-widest font-extralight">Our <span className="text-[#F19F1F]">Vision</span></h1>
                         <p className="text-xl font-extralight tracking-widest">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Our vision at Intelli Vectra Solutions is to be the forefront leader in the IT industry, renowned for our transformative solutions that enable organizations to harness the full potential of technology. We strive to be the trusted partner for businesses seeking sustainable growth and competitive advantage in the digital age.
                         </p>
                     </div>
                 </div>
