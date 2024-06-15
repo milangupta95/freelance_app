@@ -11,7 +11,7 @@ export default function Page() {
 
     return (
         <div>
-            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/carrerheader.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}/>
+            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/banners/carrerpagebanner.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}/>
             <div className="h-[5vh] bg-white"></div>
 
             <div className="flex flex-col w-[100vw] justify-center items-center space-y-4 bg-white">
@@ -21,11 +21,11 @@ export default function Page() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt onsectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt onsectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div className="w-full flex">
-                    <div className="w-[50%] relative h-[400px]">
+                <div className="w-full flex flex-col md:flex-row">
+                    <div className="md:w-[50%] w-[100%] relative h-[400px]">
                         <Image src="/images/nowhiring.jpg" layout="fill" />
                     </div>
-                    <div className="w-[50%] bg-[#FFDFAD] p-16 py-16 space-y-8">
+                    <div className="md:w-[50%] w-[100%] bg-[#FFDFAD] p-16 py-16 space-y-8">
                         <p className="text-black tracking-widest font-extralight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt onsectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt onsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <button onClick={moveToApply} className="py-2 bg-[#F19F1F] font-light px-8">Apply</button>
                     </div>

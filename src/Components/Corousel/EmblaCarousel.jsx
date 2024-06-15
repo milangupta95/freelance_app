@@ -14,7 +14,7 @@ const EmblaCarousel = (props) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [
         Autoplay({ playOnInit: true, delay: 2000 })
     ]);
-    const posi = [0, 50, 95];
+    const posi = [0, 50, 92];
     const years = [2022, 2023, 2024];
     const [posIdx, setPosIdx] = useState(0)
 
@@ -22,14 +22,14 @@ const EmblaCarousel = (props) => {
         const handleInterval = () => {
             setPosIdx((posIdx) => ((posIdx + 1) % 3))
             console.log('Event triggered');
-          };
-      
-          // Set up the interval
-          const intervalId = setInterval(handleInterval, 2000);
-      
-          // Clean up the interval when the component is unmounted
-          return () => clearInterval(intervalId);
-    }, []);
+        };
+
+        // Set up the interval
+        const intervalId = setInterval(handleInterval, 2000);
+
+        // Clean up the interval when the component is unmounted
+        return () => clearInterval(intervalId);
+    }, [posIdx]);
     const [isPlaying, setIsPlaying] = useState(true)
 
     const {
@@ -83,8 +83,8 @@ const EmblaCarousel = (props) => {
                         disabled={prevBtnDisabled}
                     /></div>
                     <div className="border-t-2 relative border-white w-[98%] px-4" >
-                        <div className={`absolute left-[${posi[posIdx]}%]`}>
-                            <BiDownArrow fontSize={28}></BiDownArrow>
+                        <div style={{position: 'absolute',left: `${posi[posIdx]}%`}}>
+                            <BiDownArrow fontSize={28} />
                             <p>{years[posIdx]}</p>
                         </div>
                     </div>

@@ -15,13 +15,13 @@ export default function Page() {
   const [subject, setSubject] = React.useState("")
   const [message, setMessage] = React.useState("")
   return (
-    <div>
+    <div className="w-full">
       <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
-      <div className='bg-[#FFFAF2] w-full py-8 px-32 space-y-8'>
+      <div className='bg-[#FFFAF2] w-full md:py-8 md:px-32 space-y-8'>
         <h1 className='text-center text-3xl underline font-bold text-[#FFC872] '> Get In Touch </h1>
-        <div className='flex space-x-4 w-full justify-center items-center'>
-          <div className='space-y-2'>
-            <div className='h-[100px] p-2 flex items-center justify-center space-x-4 shadow-lg w-[250px] bg-white rounded-lg'>
+        <div className='flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full justify-center items-center'>
+          <div className='space-y-2 w-full md:w-[25%]'>
+            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaPhoneAlt style={{ fontSize: '35px' }} /></div>
               <div className='text-black text-sm font-extralight'>
                 <p>24*7 Services</p>
@@ -29,7 +29,7 @@ export default function Page() {
                 <p>Tel: 012-4496-0635</p>
               </div>
             </div>
-            <div className='h-[100px] p-2 flex items-center justify-center space-x-4  shadow-lg w-[250px] bg-white rounded-lg'>
+            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><MdEmail style={{ fontSize: '35px' }} /></div>
               <div className='text-black text-sm font-extralight'>
                 <p>Drop a Line</p>
@@ -37,7 +37,7 @@ export default function Page() {
                 <p>info@intellivectra.tech</p>
               </div>
             </div>
-            <div className='h-[100px] p-2 flex items-center justify-center space-x-4  shadow-lg w-[250px] bg-white rounded-lg'>
+            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaLocationDot style={{ fontSize: '35px' }} /></div>
               <div className="text-black font-extralight">
                 <p className="text-xs">Location</p>
@@ -50,7 +50,7 @@ export default function Page() {
 
               </div>
             </div>
-            <div className='h-[100px] p-2 flex items-center justify-center space-x-4  shadow-lg w-[250px] bg-white rounded-lg'>
+            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaRegClock style={{ fontSize: '35px' }} /></div>
               <div className="text-black font-extralight text-sm">
                 <p>Office Hours</p>
@@ -60,7 +60,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className='bg-white shadow-lg space-y-8 text-black p-4 py-8 rounded-lg w-[70%] h-[420px]'>
+          <div className='bg-white shadow-lg space-y-8 text-black p-4 py-8 rounded-lg md:w-[70%] w-full h-fit md:h-[420px]'>
             <div>
               <h1 className='text-3xl font-extralight'>Send Message</h1>
               <p className='text-xl font-extralight'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
@@ -87,7 +87,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className='flex items-end justify-center w-full bg-white'>
+      <div className='flex flex-col md:flex-row items-end justify-center w-full bg-white'>
         <div className='space-y-4 flex flex-col justify-center'>
           <Image src="/images/indiagate.jpg" height={300} width={500} />
           <h1 className='text-4xl text-[#F19F1F] text-center'>Haryana, India</h1>

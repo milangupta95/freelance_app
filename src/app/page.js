@@ -1,37 +1,52 @@
 import { BenifitCard } from "@/Components/Cards/BenifitCard";
 import { ContentCard } from "@/Components/Cards/ContentCard";
+import { PageStarter } from "@/Components/PageStarter";
 import { Button } from "@/Components/ui/Button";
 import Image from "next/image";
 
 export default function Home() {
+  const events = [
+    {
+      "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSliF3XoIDPLq9MzY4adp9caGN98v3axTGMA&s",
+      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
+      "username": "User One",
+      "userDes": "Description for User One",
+      "description": "The Biggest Technical AI conference in San Francisco",
+      "link": "https://www.ai.engineer/worldsfair?wt.mc_id=eventscatalog",
+      "date": "June 25-27 2024"
+    },
+    {
+      "link": "https://devopscon.io/new-york/",
+      "imageSrc": "https://devopscon.io/wp-content/uploads/2024/04/Header_Image-13.jpg",
+      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
+      "username": "User Two",
+      "userDes": "Description for User Two",
+      "description": "The Conference for CI/CD, Kubernetes Ecosystem, Agile & Lean Business",
+      "date": "October 8 – 9, 2024"
+    },
+    {
+      "link": "https://www.rsaconference.com/library/webcast/176-securing-ai",
+      "imageSrc": "https://www.teksystems.com/cdn-cgi/image/height=605,width=813,quality=95,format=webp/https://www.teksystems.com/-/media/teksystems/images/blogs/blog%20images/microlearning.png?iar=0&rev=a52dbfa380ad4523877d74bfacbf619f&hash=100CFFE850E379EE87623E8B04064536",
+      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
+      "username": "User Three",
+      "userDes": "Description for User Three",
+      "description": "Securing AI Like a Boss",
+      "date": "Sep. 11, 2024"
+    }
+  ]
   const classActive = "border-b-2 px-6 border-[#FFAB2E] h-full items-center flex";
   return (
     <div className="h-min-[100vh] space-y-[30px] bg-white">
       {
         // Starter Layout
       }
-      <div className="px-20 flex items-center h-[80vh] w-full bg-cover bg-center" style={{ backgroundImage: "url('images/frontpageimage.jpg')" }}>
-        <div className="flex flex-col space-y-8">
-          <div className="border-[#F19F1F] space-y-4 border-l-2 px-4">
-            <h1 className="text-4xl">
-              <span className="text-[#F19F1F]">BUSINESS</span>
-              <span className="text-white"> & ENTERPRISE HUB</span>
-            </h1>
-            <p className="w-[45%] text-white">
-              Simplify complexity and drive digital transformation with Intelli Vectra Technologies’ innovative IT solutions for sustainable business growth.
-            </p>
-          </div>
-          <div>
-            <Button buttonText={"Explore"} functionToPerform={null} />
-          </div>
-        </div>
-      </div>
+      <PageStarter tit1={"BUSINESS"} imageSrc={"images/frontpageimage.jpg"} tit2={" & ENTERPRISE HUB"} tit1Col={"#F19F1F"} desc={"Simplify complexity and drive digital transformation with Intelli Vectra Technologies’ innovative IT solutions for sustainable business growth."} descColor={"white"} />
       {
         // About Layout
       }
 
-      <div className="w-full px-10 space-x-20 bg-white text-black items-center justify-center flex">
-        <div className="flex w-[40%] items-center">
+      <div className="w-full px-10 md:space-x-20 bg-white text-black items-center justify-center flex md:flex-row flex-col">
+        <div className="flex md:w-[40%] w-full items-center">
           {/* First Image */}
           <div className="w-full max-w-sm mb-6">
             <Image
@@ -51,11 +66,11 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="h-full items-center w-[50%] space-y-6">
+        <div className="h-full items-center md:w-[50%] w-full space-y-6">
           <h1 className="px-2 border-l-2 text-black text-[16px] font-bold border-[#F19F1F]">ABOUT US</h1>
-          <h1 className="px-2 text-[#F19F1F] text-[36px]">Empowering Digital Transformation with Innovative IT Solutions</h1>
+          <h1 className="md:px-2 text-[#F19F1F] md:text-[36px] text-2xl">Empowering Digital Transformation with Innovative IT Solutions</h1>
 
-          <p className="text-[18px] text-[#3F444]">
+          <p className="md:text-[18px] text-normal text-[#3F444]">
             Intelli Vectra Technologies is a leading IT solutions provider dedicated to helping clients harness technology innovation and simplify IT complexities. Our mission is to enable digital transformation and maximize return on IT investment. By leveraging cutting-edge technologies and delivering tailored solutions, Intelli Vectra Technologies empowers businesses to stay ahead in the rapidly evolving digital landscape. Our expertise spans across various domains, ensuring that our clients achieve operational efficiency, enhanced security, and sustainable growth
 
           </p>
@@ -66,8 +81,8 @@ export default function Home() {
 
 
       <div className="text-center min-h-[70vh] bg-[#FFFAF2] p-4">
-        <h1 className="text-5xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
-        <p className="text-gray-600 mb-6 font-light text-2xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
+        <h1 className="md:text-5xl text-2xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
+        <p className="text-gray-600 mb-6 font-light md:text-2xl text-xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
 
         <div className="flex items-center justify-center rounded-[50%]">
           <Image className="rounded-[50%]" width={500} height={500} src="/images/solutionandservices.jpg" alt="Solutions & Services" />
@@ -79,7 +94,7 @@ export default function Home() {
           <p className="font-extralight text-xl tracking-wide text-center">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven </p>
           <p className="font-extralight text-xl text-center tracking-wide">Approach, Client-Centric Services, Proven Results.</p>
         </div>
-        <div className="bg-white flex justify-between items-center p-4">
+        <div className="bg-white flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-center p-4">
           <BenifitCard
             imagesrc={"/images/bp2.png"}
             title={"CUSTOMER FOCUS"}
@@ -104,21 +119,21 @@ export default function Home() {
           <p className="text-center text-xl tracking-wide">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
         </div>
 
-        <div className="flex space-y-16 flex-col justify-center">
-          <div className="space-x-32 flex w-full justify-center">
+        <div className="flex md:space-y-16 flex-col justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp1.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp2.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp3.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp4.png" />
           </div>
-          <div className="space-x-32 flex w-full justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp5.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp6.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp7.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp8.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp9.png" />
           </div>
-          <div className="space-x-32 flex w-full justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp10.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp11.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp12.png" />
@@ -128,17 +143,19 @@ export default function Home() {
       </div>
       <div className="text-gray-600 w-full space-y-4 flex flex-col justify-between items-center">
         <h1 className="text-4xl text-center">Content <span className="text-[#FFAB2E]">Hub</span></h1>
-        <ul className="w-full flex space-x-40 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
+        <ul className="w-full flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
           <li className={classActive}>Blog</li>
           <li>News</li>
           <li>Case Study</li>
           <li>Events</li>
         </ul>
 
-        <div className="flex space-x-10 items-center justify-center">
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
-          <ContentCard date={"12 Jan 2024"} description={"Consectetur adipiscing elit dolore magna aliqua?"} imageSrc={"/images/blog1.jpg"} userImageSrc={"/images/av1.jpg"} username={"Jessica"} userDes={"UI/UX Designer"} />
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
+          {
+            events.map((event) => {
+              return <ContentCard content={event}/>
+            })
+          }
         </div>
       </div>
 
