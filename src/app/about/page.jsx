@@ -135,27 +135,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className="h-[8vh] bg-white"></div>
-            <div className="bg-[#FFFAF2] py-8 w-full text-black flex items-center justify-center">
-                <div className="w-full md:w-[45%] space-y-8">
-                    <h1 className="text-center text-2xl md:text-4xl font-semibold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
-                    <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                    <div className="flex flex-col md:flex-row justify-center">
-                        <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
-                            <h1 className="text-[#F19F1F] text-5xl font-bold">2+</h1>
-                            <p className="font-bold text-sm tracking-wider">Countries</p>
-                        </div>
-                        <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
-                            <h1 className="text-[#F19F1F] text-5xl font-bold">1000+</h1>
-                            <p className="font-bold text-sm tracking-wider">Projects</p>
-                        </div>
-                        <div className="p-8 text-center space-y-4">
-                            <h1 className="text-[#F19F1F] text-5xl font-bold">10+</h1>
-                            <p className="font-bold text-sm tracking-wider">Total Services</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     )
 }

@@ -79,7 +79,6 @@ export default function Home() {
         </div>
       </div>
 
-
       <div className="text-center min-h-[70vh] bg-[#FFFAF2] p-4">
         <h1 className="md:text-5xl text-2xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
         <p className="text-gray-600 mb-6 font-light md:text-2xl text-xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
@@ -141,7 +140,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-gray-600 w-full space-y-4 flex flex-col justify-between items-center">
+      <div className="text-gray-600 w-full space-y-6 flex flex-col justify-between items-center">
         <h1 className="text-4xl text-center">Content <span className="text-[#FFAB2E]">Hub</span></h1>
         <ul className="w-full flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
           <li className={classActive}>Blog</li>
@@ -153,13 +152,36 @@ export default function Home() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
           {
             events.map((event) => {
-              return <ContentCard content={event}/>
+              return <ContentCard content={event} />
             })
           }
         </div>
+        <div className="w-full flex items-center justify-center">
+          <button className="bg-[#FFAB2E] p-4 rounded">See More</button>
+        </div>
       </div>
 
-
+      <div className="h-[8vh] bg-white"></div>
+      <div className="bg-[#FFFAF2] py-8 w-full text-black flex items-center justify-center">
+        <div className="w-full md:w-[45%] space-y-8">
+          <h1 className="text-center text-2xl md:text-4xl font-semibold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
+          <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+          <div className="flex flex-col md:flex-row justify-center">
+            <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">2+</h1>
+              <p className="font-bold text-sm tracking-wider">Countries</p>
+            </div>
+            <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">1000+</h1>
+              <p className="font-bold text-sm tracking-wider">Projects</p>
+            </div>
+            <div className="p-8 text-center space-y-4">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">10+</h1>
+              <p className="font-bold text-sm tracking-wider">Total Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
