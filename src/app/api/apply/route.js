@@ -1,12 +1,5 @@
 import nodemailer from 'nodemailer';
-import multer from 'multer';
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import formidable from 'formidable';
-// Set up multer storage and upload middleware
-const upload = multer({
-    storage: multer.memoryStorage(), // Store files in memory
-});
+
 
 export const runtime = "experimental-edge"
 
