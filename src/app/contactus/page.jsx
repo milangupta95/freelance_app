@@ -7,13 +7,60 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaRegClock } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 export default function Page() {
   const [name, setName] = React.useState("")
   const [email, setEmail] = React.useState("")
   const [phone, setPhone] = React.useState("")
   const [subject, setSubject] = React.useState("")
-  const [message, setMessage] = React.useState("")
+  const [message, setMessage] = React.useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!name || !email || !message) {
+      toast.error('Name, Email, and Message are required');
+      return;
+    }
+
+    // Prepare data for API request
+    const formData = {
+      name,
+      email,
+      phone,
+      subject,
+      message,
+    };
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(data.message);
+        // Clear form fields after successful submission
+        setName('');
+        setEmail('');
+        setPhone('');
+        setSubject('');
+        setMessage('');
+      } else {
+        toast.error(data.message || 'Something went wrong');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Failed to send email');
+    }
+  };
   return (
     <div className="w-full">
       <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
@@ -43,7 +90,7 @@ export default function Page() {
                 <p className="text-xs">Location</p>
                 <p className="text-[#F19F1F] font-normal text-xs">Visit Us At</p>
                 <p className="text-xs">
-                  2nd Floor, Plot No. 29, Maruti 
+                  2nd Floor, Plot No. 29, Maruti
                   Industrial Area, Sector-18,
                   Gurugram–122015 (Haryana).
                 </p>
@@ -79,7 +126,7 @@ export default function Page() {
                   <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message' rows={3} className='w-full p-2 font-extralight col-span-4 border border-black '></textarea>
                 </div>
                 <div className='flex items-center justify-end'>
-                  <button className='p-4 bg-[#F19F1F] tracking-wide text-white'>Submit</button>
+                  <button onClick={handleSubmit} className='p-4 bg-[#F19F1F] tracking-wide text-white'>Submit</button>
                 </div>
               </form>
             </div>
