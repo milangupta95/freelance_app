@@ -1,6 +1,4 @@
 import nodemailer from 'nodemailer';
-
-
 export const runtime = "experimental-edge"
 
 export async function POST(req, res) {

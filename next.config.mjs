@@ -5,4 +5,7 @@ export default {
         loader: 'custom',
         loaderFile: './customloader.js',
     },
+    experimental: {
+        runtime: 'nodejs',
+    },
 };
