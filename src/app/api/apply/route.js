@@ -39,8 +39,8 @@ export async function POST(req, res) {
             port: 465, // or 465 for SSL
             secure: true, // true for 465, false for other ports
             auth: {
-                user: 'milangupta95@gmail.com', // your email
-                pass: "dynncmeydkfmhzqw", // your email password
+                user: process.env.EMAIL, // your email
+                pass: process.env.EMAIL_APP_PASSWORD, // your email password
             },
         });
 

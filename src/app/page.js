@@ -1,9 +1,10 @@
+'use client'
 import { BenifitCard } from "@/Components/Cards/BenifitCard";
 import { ContentCard } from "@/Components/Cards/ContentCard";
 import { PageStarter } from "@/Components/PageStarter";
 import { Button } from "@/Components/ui/Button";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   const events = [
     {
@@ -75,7 +76,7 @@ export default function Home() {
 
           </p>
 
-          <Button buttonText={"Learn More"} />
+          <Link href="/about"><Button buttonText={"Learn More"} /></Link>
         </div>
       </div>
 
@@ -157,7 +158,7 @@ export default function Home() {
           }
         </div>
         <div className="w-full flex items-center justify-center">
-          <button className="bg-[#FFAB2E] p-4 rounded">See More</button>
+          <Link href="/blogs"><button className="bg-[#FFAB2E] p-4 rounded">See More</button></Link>
         </div>
       </div>
 

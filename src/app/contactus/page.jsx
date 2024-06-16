@@ -15,6 +15,7 @@ export default function Page() {
   const [phone, setPhone] = React.useState("")
   const [subject, setSubject] = React.useState("")
   const [message, setMessage] = React.useState("");
+  const [loading,setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ export default function Page() {
       subject,
       message,
     };
-
+    setLoading(true);
     try {
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
@@ -59,6 +60,8 @@ export default function Page() {
     } catch (error) {
       console.error('Error:', error);
       toast.error('Failed to send email');
+    } finally {
+      setLoading(false)
     }
   };
   return (
@@ -126,7 +129,7 @@ export default function Page() {
                   <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message' rows={3} className='w-full p-2 font-extralight col-span-4 border border-black '></textarea>
                 </div>
                 <div className='flex items-center justify-end'>
-                  <button onClick={handleSubmit} className='p-4 bg-[#F19F1F] tracking-wide text-white'>Submit</button>
+                  <button disabled={loading} onClick={handleSubmit} className='p-4 bg-[#F19F1F] tracking-wide text-white disabled:bg-gray-200 disabled:text-white'>{loading ? "Loading..." : "Submit"}</button>
                 </div>
               </form>
             </div>

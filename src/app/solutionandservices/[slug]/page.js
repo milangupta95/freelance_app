@@ -24,8 +24,8 @@ export default function Page({ params }) {
                 </div>
             </div>
 
-            <div className="w-full px-10 space-x-20 bg-white text-black items-center justify-center flex">
-                <div className="flex w-[40%] items-center">
+            <div className="w-full px-10 space-x-20 bg-white text-black items-center justify-center flex flex-col md:flex-row">
+                <div className="flex md:w-[40%] w-[100%] items-center">
                     {/* First Image */}
                     <div className="max-w-sm mb-6">
                         <Image
@@ -45,7 +45,7 @@ export default function Page({ params }) {
                         />
                     </div>
                 </div>
-                <div className="h-full items-center w-[45%] space-y-6">
+                <div className="h-full items-center md:w-[45%] w-[100%] space-y-6">
                     <h1 className="px-2 text-[#F19F1F] text-[30px]">{service.service_name}</h1>
 
                     <p className="text-[18px] text-[#3F444]">
@@ -60,11 +60,11 @@ export default function Page({ params }) {
 
             </div>
 
-            <div className="gap-8 grid grid-cols-2 justify-items-center">
+            <div className="gap-8 md:p-0 p-2 grid md:grid-cols-2 grid-cols-1 justify-items-center">
                 {
                     service.points.map((point) => {
                         return (
-                            <div className="w-[80%] group  border-l-8 hover-box hover:text-white  transition duration-1000 ease-in-out  hover:bg-[#F19F1F] text-[#F19F1F] border-[#F19F1F] space-y-4 p-8">
+                            <div className="md:w-[80%] w-[100%] group  border-l-8 hover-box hover:text-white  transition duration-1000 ease-in-out  hover:bg-[#F19F1F] text-[#F19F1F] border-[#F19F1F] space-y-4 p-8">
                                 <div>{point.logo}</div>
                                 <div className=" text-black group-hover:text-white space-y-4">
                                     <h1 className="text-2xl font-extralight">{point.heading}</h1>

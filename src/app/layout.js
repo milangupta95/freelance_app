@@ -9,6 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Layout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Intelli Vectra</title>
+      </head>
       <body className="bg-white">
         <ContactNavbar></ContactNavbar>
         <Navbar />
