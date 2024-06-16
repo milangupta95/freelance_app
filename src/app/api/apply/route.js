@@ -8,9 +8,8 @@ const upload = multer({
     storage: multer.memoryStorage(), // Store files in memory
 });
 
-
+export const runtime = "experimental-edge"
 export const config = {
-    runtime: 'experimental-edge',
     api: {
         bodyParser: false, // Disable Next.js default body parser
     },
