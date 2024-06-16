@@ -4,8 +4,5 @@ export default {
     images: {
         loader: 'custom',
         loaderFile: './customloader.js',
-    },
-    experimental: {
-        runtime: 'nodejs',
-    },
+    }
 };

@@ -152,8 +152,8 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
           {
-            events.map((event) => {
-              return <ContentCard content={event} />
+            events.map((event,idx) => {
+              return <ContentCard key={idx} content={event} />
             })
           }
         </div>

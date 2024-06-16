@@ -62,9 +62,9 @@ export default function Page({ params }) {
 
             <div className="gap-8 md:p-0 p-2 grid md:grid-cols-2 grid-cols-1 justify-items-center">
                 {
-                    service.points.map((point) => {
+                    service.points.map((point,idx) => {
                         return (
-                            <div className="md:w-[80%] w-[100%] group  border-l-8 hover-box hover:text-white  transition duration-1000 ease-in-out  hover:bg-[#F19F1F] text-[#F19F1F] border-[#F19F1F] space-y-4 p-8">
+                            <div key={idx} className="md:w-[80%] w-[100%] group  border-l-8 hover-box hover:text-white  transition duration-1000 ease-in-out  hover:bg-[#F19F1F] text-[#F19F1F] border-[#F19F1F] space-y-4 p-8">
                                 <div>{point.logo}</div>
                                 <div className=" text-black group-hover:text-white space-y-4">
                                     <h1 className="text-2xl font-extralight">{point.heading}</h1>

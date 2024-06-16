@@ -114,8 +114,8 @@ export default function Page() {
             <div className="w-full flex items-center justify-center">
                 <div className="bg-white md:w-full w-[80%] py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
                     {
-                        news.splice(page * 6, (page + 1) * 6).map((event) => {
-                            return <ContentCard content={event}/>
+                        news.splice(page * 6, (page + 1) * 6).map((event,idx) => {
+                            return <ContentCard key={idx} content={event}/>
                         })
                     }
                 </div>
@@ -127,7 +127,7 @@ export default function Page() {
                 </button>
                 {
                     pageArray.map((val) => {
-                        return <button className={page === val ? currPageStyle : nonCurrPageStyle}>{val + 1}</button>
+                        return <button key={val} className={page === val ? currPageStyle : nonCurrPageStyle}>{val + 1}</button>
                     })
                 }
                 <button onClick={setNextPage} class="px-3 py-1 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300">

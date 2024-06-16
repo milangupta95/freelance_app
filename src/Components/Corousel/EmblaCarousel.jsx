@@ -96,8 +96,8 @@ const EmblaCarousel = (props) => {
             </div>
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    {slides.map((slide) => (
-                        <div className="space-x-8 flex justify-between embla__slide">
+                    {slides.map((slide,idx) => (
+                        <div key={idx} className="space-x-8 flex justify-between embla__slide">
                             <div>
                                 <Image src={slide.image_src} height={400} width={400}></Image>
                             </div>
