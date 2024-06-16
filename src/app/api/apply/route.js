@@ -9,11 +9,6 @@ const upload = multer({
 });
 
 export const runtime = "experimental-edge"
-export const config = {
-    api: {
-        bodyParser: false, // Disable Next.js default body parser
-    },
-};
 
 export async function POST(req, res) {
     try {
