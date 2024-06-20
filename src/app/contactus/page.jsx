@@ -67,49 +67,9 @@ export default function Page() {
   return (
     <div className="w-full">
       <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
-      <div className='bg-[#FFFAF2] w-full md:py-8 md:px-32 space-y-8'>
+      <div className='bg-[#FFFAF2] w-full md:py-8 space-y-2 md:px-32 md:space-y-8'>
         <h1 className='text-center text-3xl underline font-bold text-[#FFC872] '> Get In Touch </h1>
-        <div className='flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full justify-center items-center'>
-          <div className='space-y-2 w-full md:w-[25%]'>
-            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
-              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaPhoneAlt style={{ fontSize: '35px' }} /></div>
-              <div className='text-black text-sm font-extralight'>
-                <p>24*7 Services</p>
-                <p className="text-[#F19F1F] font-normal">Call Us On</p>
-                <p>Tel: 012-4496-0635</p>
-              </div>
-            </div>
-            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
-              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><MdEmail style={{ fontSize: '35px' }} /></div>
-              <div className='text-black text-sm font-extralight'>
-                <p>Drop a Line</p>
-                <p className="text-[#F19F1F] font-normal">Mail Address</p>
-                <p>info@intellivectra.tech</p>
-              </div>
-            </div>
-            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
-              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaLocationDot style={{ fontSize: '35px' }} /></div>
-              <div className="text-black font-extralight">
-                <p className="text-xs">Location</p>
-                <p className="text-[#F19F1F] font-normal text-xs">Visit Us At</p>
-                <p className="text-xs">
-                  2nd Floor, Plot No. 29, Maruti
-                  Industrial Area, Sector-18,
-                  Gurugram–122015 (Haryana).
-                </p>
-
-              </div>
-            </div>
-            <div className='h-[100px] p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
-              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaRegClock style={{ fontSize: '35px' }} /></div>
-              <div className="text-black font-extralight text-sm">
-                <p>Office Hours</p>
-                <p className="text-[#F19F1F] font-normal text-xs">Opening Time</p>
-                <p>Mon - Fri : 9am - 8pm</p>
-                <p>Sat - Sun (Closed)</p>
-              </div>
-            </div>
-          </div>
+        <div className='flex p-4 flex-col md:flex-row-reverse space-y-4 md:space-y-0 md:space-x-4 w-full justify-center items-center'>
           <div className='bg-white shadow-lg space-y-8 text-black p-4 py-8 rounded-lg md:w-[70%] w-full h-fit md:h-[420px]'>
             <div>
               <h1 className='text-3xl font-extralight'>Send Message</h1>
@@ -132,6 +92,46 @@ export default function Page() {
                   <button disabled={loading} onClick={handleSubmit} className='p-4 bg-[#F19F1F] tracking-wide text-white disabled:bg-gray-200 disabled:text-white'>{loading ? "Loading..." : "Submit"}</button>
                 </div>
               </form>
+            </div>
+          </div>
+          <div className='w-full md:grid-cols-1 grid grid-cols-2 gap-1 gap-y-2 md:w-[25%]'>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaPhoneAlt style={{ fontSize: '30px' }} /></div>
+              <div className='text-black text-sm font-extralight'>
+                <p>24*7 Services</p>
+                <p className="text-[#F19F1F] font-normal">Call Us On</p>
+                <p>Tel: 012-4496-0635</p>
+              </div>
+            </div>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><MdEmail style={{ fontSize: '30px' }} /></div>
+              <div className='text-black text-sm font-extralight'>
+                <p>Drop a Line</p>
+                <p className="text-[#F19F1F] font-normal">Mail Address</p>
+                <p>info@intellivectra.tech</p>
+              </div>
+            </div>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaLocationDot style={{ fontSize: '30px' }} /></div>
+              <div className="text-black font-extralight">
+                <p className="text-xs">Location</p>
+                <p className="text-[#F19F1F] font-normal text-xs">Visit Us At</p>
+                <p className="text-xs">
+                  2nd Floor, Plot No. 29, Maruti
+                  Industrial Area, Sector-18,
+                  Gurugram–122015 (Haryana).
+                </p>
+
+              </div>
+            </div>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+              <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaRegClock style={{ fontSize: '30px' }} /></div>
+              <div className="text-black font-extralight text-sm">
+                <p>Office Hours</p>
+                <p className="text-[#F19F1F] font-normal text-xs">Opening Time</p>
+                <p>Mon - Fri : 9am - 8pm</p>
+                <p>Sat - Sun (Closed)</p>
+              </div>
             </div>
           </div>
         </div>
