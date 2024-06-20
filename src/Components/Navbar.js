@@ -8,6 +8,8 @@ import { useState, useEffect, useRef } from 'react';
 import { SlCalender } from "react-icons/sl";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRouter } from 'next/navigation';
+import { RiMenu2Fill } from "react-icons/ri";
+
 
 export const Navbar = () => {
     const pathname = usePathname();
@@ -20,6 +22,7 @@ export const Navbar = () => {
     const handleClickOutside = (event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
             setIsMenuOpen(false);
+            setShowContentInner(false);
         }
     };
 
@@ -34,6 +37,11 @@ export const Navbar = () => {
         };
     }, [isMenuOpen]);
 
+    useEffect(() => {
+        setIsMenuOpen(false);
+        setShowContentInner(false);
+    }, [pathname])
+
     return (
         <div className="relative">
             <div className='bg-white h-[70px] p-4 w-full flex justify-between items-center shadow-md z-50 relative'>
@@ -41,11 +49,15 @@ export const Navbar = () => {
                     <Image height={40} width={200} src='/images/logo.png' alt='Logo' />
                 </div>
                 <div className='lg:hidden'>
-                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='text-black focus:outline-none'>
-                        {isMenuOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
+                    <button onClick={() => {
+                        if (isMenuOpen) setShowContentInner(false)
+                        setIsMenuOpen(!isMenuOpen)
+                    }} className='text-black focus:outline-none'>
+                        {isMenuOpen ? <IoMdClose size={24} /> : <RiMenu2Fill size={24} />}
                     </button>
                 </div>
-                <div ref={menuRef} className={`lg:flex lg:flex-row ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center absolute lg:static top-[59px] left-0 w-full lg:w-auto bg-white lg:bg-transparent p-4 lg:p-0`}>
+                <div ref={menuRef} className={`lg:flex lg:flex-row ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center absolute lg:static top-[70px] right-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 bg-white lg:w-auto lg:bg-transparent p-4 lg:p-0 w-[50%] 
+    ${isMenuOpen ? 'slide-in-right' : 'slide-out-right'} transition-all duration-300 ease-in-out md:transition-none md:w-auto`}>
                     <ul className='flex-col lg:flex-row flex space-y-4 lg:space-y-0 lg:space-x-6 cursor-pointer list-style-none text-gray-600 w-full lg:w-auto'>
                         <Link href="/"><li className={`${pathname === '/' ? classActive : classUnActive}`}>Home</li></Link>
                         <Link href="/about"><li className={`${pathname === '/about' ? classActive : classUnActive}`}>About us</li></Link>
@@ -63,7 +75,7 @@ export const Navbar = () => {
 
 
             </div>
-            <div className={!showContentInner ? "hidden" : "bg-white z-[100] text-black w-fit absolute top-10 shadow-lg right-40 rounded-lg p-4"}>
+            <div className={`transition-all md:transition-none duration-1000 transform ${showContentInner ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} bg-white z-[100] text-black md:w-fit w-[50%] absolute md:top-10 top-[310px] md:shadow-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 md:bg-opacity-100 md:right-40 right-0 md:rounded-lg p-4`}>
                 <ul className="space-y-4">
                     <li onClick={
                         () => {
@@ -76,19 +88,19 @@ export const Navbar = () => {
                             router.push("/news");
                             setShowContentInner(false);
                         }
-                    }  className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/news.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">News</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
+                    } className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/news.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">News</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
                     <li onClick={
                         () => {
                             router.push("/events");
                             setShowContentInner(false);
                         }
-                    }  className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/calender.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">Events</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
+                    } className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/calender.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">Events</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
                     <li onClick={
                         () => {
                             router.push("/casestudy");
                             setShowContentInner(false);
                         }
-                    }   className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/casestudy.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">Case Study</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
+                    } className="cursor-pointer flex items-center text-lg space-x-4"><div className="flex items-center justify-between w-full space-x-4"><span><Image src="/images/icons/casestudy.png" height={40} width={40}></Image></span><p className="hover:border-b hover:text-[#FFAB2E] border-[#FFAB2E]">Case Study</p><span><IoIosArrowForward style={{ fontSize: '20px', color: "#FFAB2E", fontWeight: "bold" }}></IoIosArrowForward></span></div></li>
                 </ul>
             </div>
         </div>

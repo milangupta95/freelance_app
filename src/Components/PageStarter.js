@@ -4,7 +4,7 @@ import { Button } from './ui/Button';
 export const PageStarter = ({ tit1Col, tit1, tit2, description, imageSrc, descColor, desc }) => {
     return (
         <div
-            className="px-4 md:px-10 lg:px-20 flex items-center h-[80vh] w-full bg-cover bg-center"
+            className="px-4 md:px-10 lg:px-20 flex items-center h-[50vh] md:h-[80vh] w-full bg-cover bg-center"
             style={{ backgroundImage: `url(${imageSrc})` }}
         >
             <div className="flex flex-col space-y-4 md:space-y-8 max-w-full md:max-w-2xl lg:max-w-none">

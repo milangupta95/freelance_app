@@ -37,7 +37,7 @@ export default function Home() {
   ]
   const classActive = "border-b-2 px-6 border-[#FFAB2E] h-full items-center flex";
   return (
-    <div className="h-min-[100vh] space-y-[30px] bg-white">
+    <div className="h-min-[100vh] space-y-[40px] md:space-y-[60px] bg-white">
       {
         // Starter Layout
       }
@@ -46,19 +46,19 @@ export default function Home() {
         // About Layout
       }
 
-      <div className="w-full px-10 md:space-x-20 bg-white text-black items-center justify-center flex md:flex-row flex-col">
-        <div className="flex md:w-[40%] w-full items-center">
+      <div className="w-full px-10 md:space-x-20 bg-white text-black justify-center items-center flex md:flex-row flex-col">
+        <div className="flex md:w-[40%] w-full">
           {/* First Image */}
-          <div className="w-full max-w-sm mb-6">
+          <div className="w-full max-w-sm">
             <Image
               src="/images/image-1.jpg"
               alt="Team hands"
               width={300}
-              height={550}
+              height={440}
             />
           </div>
           {/* Second Image */}
-          <div className="w-full max-w-xs align-bottom ml-[-200px] mt-[400px]">
+          <div className="w-full max-w-xs mt-[350px] ml-[-200px]">
             <Image
               src="/images/image-2.jpg"
               alt="Team meeting"
@@ -68,19 +68,18 @@ export default function Home() {
           </div>
         </div>
         <div className="h-full items-center md:w-[50%] w-full space-y-6">
-          <h1 className="px-2 border-l-2 text-black text-[16px] font-bold border-[#F19F1F]">ABOUT US</h1>
-          <h1 className="md:px-2 text-[#F19F1F] md:text-[36px] text-2xl">Empowering Digital Transformation with Innovative IT Solutions</h1>
+          <h1 className="px-2 border-l-2 text-black text-[20px] font-bold border-[#F19F1F]">ABOUT US</h1>
+          <p className="text-[#F19F1F] md:text-4xl text-2xl tracking-wide">Empowering Digital Transformation with Innovative IT Solutions</p>
 
           <p className="md:text-[18px] text-normal text-[#3F444]">
             Intelli Vectra Technologies is a leading IT solutions provider dedicated to helping clients harness technology innovation and simplify IT complexities. Our mission is to enable digital transformation and maximize return on IT investment. By leveraging cutting-edge technologies and delivering tailored solutions, Intelli Vectra Technologies empowers businesses to stay ahead in the rapidly evolving digital landscape. Our expertise spans across various domains, ensuring that our clients achieve operational efficiency, enhanced security, and sustainable growth
-
           </p>
-
+          <div className="w-full h-6 bg-white"></div>
           <Link href="/about"><Button buttonText={"Learn More"} /></Link>
         </div>
       </div>
 
-      <div className="text-center min-h-[70vh] bg-[#FFFAF2] p-4">
+      <div className="text-center min-h-[70vh] bg-[#FFFAF2] p-8">
         <h1 className="md:text-5xl text-2xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
         <p className="text-gray-600 mb-6 font-light md:text-2xl text-xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
 
@@ -94,7 +93,7 @@ export default function Home() {
           <p className="font-extralight text-xl tracking-wide text-center">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven </p>
           <p className="font-extralight text-xl text-center tracking-wide">Approach, Client-Centric Services, Proven Results.</p>
         </div>
-        <div className="bg-white flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-center p-4">
+        <div className="bg-white grid grid-cols-2 xl:grid-cols-4 justify-items-center gap-x-4 gap-y-12 md:gap-x-4 md:space-y-0 p-4">
           <BenifitCard
             imagesrc={"/images/bp2.png"}
             title={"CUSTOMER FOCUS"}
@@ -119,25 +118,45 @@ export default function Home() {
           <p className="text-center text-xl tracking-wide">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
         </div>
 
-        <div className="flex md:space-y-16 flex-col justify-center">
-          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
+        <div className="flex md:space-y-16 space-y-8 p-2 flex-col justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-4 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp1.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp2.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp3.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp4.png" />
           </div>
-          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-5 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp5.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp6.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp7.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp8.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp9.png" />
           </div>
-          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-2 justify-items-center w-full md:justify-center">
+          <div className="md:space-x-32 gap-2 md:flex grid grid-cols-4 justify-items-center w-full md:justify-center">
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp10.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp11.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp12.png" />
             <Image alt="Technology Partner" height={100} width={100} src="/images/tp13.png" />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#FFFAF2] py-8 p-4 w-full text-black flex items-center justify-center">
+        <div className="w-full md:w-[45%] space-y-8">
+          <h1 className="text-center text-4xl font-semibold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
+          <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+          <div className="flex flex-row justify-center">
+            <div className="p-8 text-center space-y-4 border-r">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">2+</h1>
+              <p className="font-bold text-sm tracking-wider">Countries</p>
+            </div>
+            <div className="p-8 text-center space-y-4 border-r">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">1000+</h1>
+              <p className="font-bold text-sm tracking-wider">Projects</p>
+            </div>
+            <div className="p-8 text-center space-y-4">
+              <h1 className="text-[#F19F1F] text-5xl font-bold">10+</h1>
+              <p className="font-bold text-sm tracking-wider">Total Services</p>
+            </div>
           </div>
         </div>
       </div>
@@ -150,37 +169,15 @@ export default function Home() {
           <li>Events</li>
         </ul>
 
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
+        <div className="flex flex-col p-4 md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
           {
-            events.map((event,idx) => {
+            events.map((event, idx) => {
               return <ContentCard key={idx} content={event} />
             })
           }
         </div>
         <div className="w-full flex items-center justify-center">
           <Link href="/blogs"><button className="bg-[#FFAB2E] p-4 rounded">See More</button></Link>
-        </div>
-      </div>
-
-      <div className="h-[8vh] bg-white"></div>
-      <div className="bg-[#FFFAF2] py-8 w-full text-black flex items-center justify-center">
-        <div className="w-full md:w-[45%] space-y-8">
-          <h1 className="text-center text-2xl md:text-4xl font-semibold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
-          <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-          <div className="flex flex-col md:flex-row justify-center">
-            <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
-              <h1 className="text-[#F19F1F] text-5xl font-bold">2+</h1>
-              <p className="font-bold text-sm tracking-wider">Countries</p>
-            </div>
-            <div className="p-8 text-center space-y-4 border-b md:border-b-0 md:border-r">
-              <h1 className="text-[#F19F1F] text-5xl font-bold">1000+</h1>
-              <p className="font-bold text-sm tracking-wider">Projects</p>
-            </div>
-            <div className="p-8 text-center space-y-4">
-              <h1 className="text-[#F19F1F] text-5xl font-bold">10+</h1>
-              <p className="font-bold text-sm tracking-wider">Total Services</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

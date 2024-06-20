@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-in-out;
+}
+
+.slide-out-right {
+  animation: slideOutRight 1s ease-in-out;
+}
 
 @keyframes gradient-move {
   0% { background-position: 100% 0; }

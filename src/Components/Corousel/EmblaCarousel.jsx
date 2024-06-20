@@ -97,11 +97,11 @@ const EmblaCarousel = (props) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((slide,idx) => (
-                        <div key={idx} className="space-x-8 flex justify-between embla__slide">
-                            <div>
-                                <Image src={slide.image_src} height={400} width={400}></Image>
+                        <div key={idx} className="md:space-x-8 flex md:flex-row flex-col justify-between embla__slide">
+                            <div className="md:w-[50%] w-[100%] relative h-[200px]">
+                                <Image src={slide.image_src} layout='fill'></Image>
                             </div>
-                            <div className="w-[50%] space-y-4">
+                            <div className="md:w-[50%] w-[100%] space-y-4">
                                 <h1 className='text-4xl'>{slide.heading}</h1>
                                 <p>{slide.text_content}</p>
                             </div>
