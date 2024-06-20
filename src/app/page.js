@@ -80,18 +80,17 @@ export default function Home() {
       </div>
 
       <div className="text-center min-h-[70vh] bg-[#FFFAF2] p-8">
-        <h1 className="md:text-5xl text-2xl text-gray-800 mb-2">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
+        <h1 className="md:text-4xl text-2xl text-gray-800 mb-2 font-bold">Solutions & <span className="text-[#FFAB2E]">Services</span></h1>
         <p className="text-gray-600 mb-6 font-light md:text-2xl text-xl">Empowering Your Digital Journey: Seamless Solutions for Every IT Need.</p>
 
         <div className="flex items-center justify-center rounded-[50%]">
           <Image className="rounded-[50%]" width={500} height={500} src="/images/solutionandservices.jpg" alt="Solutions & Services" />
         </div>
       </div>
-      <div className="text-black space-y-10">
-        <div>
-          <h1 className="text-center tracking-wide text-4xl text-gray-600">Key <span className="text-[#FFAB2E]">Benefits</span></h1>
-          <p className="font-extralight text-xl tracking-wide text-center">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven </p>
-          <p className="font-extralight text-xl text-center tracking-wide">Approach, Client-Centric Services, Proven Results.</p>
+      <div className="text-black space-y-2">
+        <div className="w-full flex items-center justify-center flex-col">
+          <h1 className="text-center tracking-wide text-2xl font-bold md:text-4xl text-gray-600">Key <span className="text-[#FFAB2E]">Benefits</span></h1>
+          <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70%] w-[100%]">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven Approach, Client-Centric Services, Proven Results.</p>
         </div>
         <div className="bg-white grid grid-cols-2 xl:grid-cols-4 justify-items-center gap-x-4 gap-y-12 md:gap-x-4 md:space-y-0 p-4">
           <BenifitCard
@@ -114,7 +113,7 @@ export default function Home() {
       </div>
       <div className="w-full text-gray-600 space-y-10 bg-[#FFFAF2] py-12 flex flex-col">
         <div className="w-full space-y-2">
-          <h1 className="text-4xl text-center">Technology <span className="text-[#FFAB2E]">Partners</span></h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-center">Technology <span className="text-[#FFAB2E]">Partners</span></h1>
           <p className="text-center text-xl tracking-wide">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
         </div>
 
@@ -142,7 +141,7 @@ export default function Home() {
       </div>
       <div className="bg-[#FFFAF2] py-8 p-4 w-full text-black flex items-center justify-center">
         <div className="w-full md:w-[45%] space-y-8">
-          <h1 className="text-center text-4xl font-semibold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
+          <h1 className="text-center text-2xl md:text-4xl font-bold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
           <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
           <div className="flex flex-row justify-center">
             <div className="p-8 text-center space-y-4 border-r">
@@ -161,7 +160,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-gray-600 w-full space-y-6 flex flex-col justify-between items-center">
-        <h1 className="text-4xl text-center">Content <span className="text-[#FFAB2E]">Hub</span></h1>
+        <h1 className="text-4xl text-center font-bold">Content <span className="text-[#FFAB2E]">Hub</span></h1>
         <ul className="w-full flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
           <li className={classActive}>Blog</li>
           <li>News</li>
