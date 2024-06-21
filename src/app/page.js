@@ -178,7 +178,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-black space-y-2">
-        <div className="w-full flex items-center justify-center flex-col space-y-4">
+        <div className="w-full flex items-center flex-col justify-center flex-col space-y-4">
           <h1 className="text-center tracking-wide text-2xl font-bold md:text-4xl text-gray-600">Key <span className="text-[#FFAB2E]">Benefits</span></h1>
           <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70%] w-[100%]">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven Approach, Client-Centric Services, Proven Results.</p>
         </div>
@@ -203,9 +203,9 @@ export default function Home() {
       </div>
       <div className="w-full p-4 flex items-center justify-center">
         <div className="w-full text-gray-600 space-y-10 bg-[#FFFAF2] py-12 flex flex-col">
-          <div className="w-full space-y-2">
+          <div className="w-full space-y-4 flex-col flex items-center">
             <h1 className="text-2xl md:text-4xl font-bold text-center">Technology <span className="text-[#FFAB2E]">Partners</span></h1>
-            <p className="text-center text-xl tracking-wide">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
+            <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70%] w-[100%]">Partnering with industry-leading manufacturers to deliver cutting-edge technology solutions<br /> tailored to your business needs.</p>
           </div>
 
           <div className="flex md:space-y-16 space-y-8 p-2 flex-col justify-center">
@@ -235,8 +235,10 @@ export default function Home() {
       <div className="w-full p-4 flex items-center justify-center">
         <div className="bg-[#FFFAF2] py-8 p-4 w-full text-black flex items-center justify-center">
           <div className="w-full md:w-[45%] space-y-8">
-            <h1 className="text-center text-2xl md:text-4xl font-bold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
-            <p className="text-[#676767] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <div className="space-y-4 flex flex-col justify-center items-center w-full">
+              <h1 className="text-center text-2xl md:text-4xl font-bold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
+              <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70vw] w-[95vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
             <div className="flex flex-row justify-center">
               <div className="p-8 text-center space-y-4 border-r">
                 <h1 className="text-[#F19F1F] text-2xl md:text-5xl font-bold">2+</h1>
