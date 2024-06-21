@@ -5,37 +5,127 @@ import { PageStarter } from "@/Components/PageStarter";
 import { Button } from "@/Components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from 'react'
 export default function Home() {
-  const events = [
-    {
-      "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSliF3XoIDPLq9MzY4adp9caGN98v3axTGMA&s",
-      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
-      "username": "User One",
-      "userDes": "Description for User One",
-      "description": "The Biggest Technical AI conference in San Francisco",
-      "link": "https://www.ai.engineer/worldsfair?wt.mc_id=eventscatalog",
-      "date": "June 25-27 2024"
-    },
-    {
-      "link": "https://devopscon.io/new-york/",
-      "imageSrc": "https://devopscon.io/wp-content/uploads/2024/04/Header_Image-13.jpg",
-      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
-      "username": "User Two",
-      "userDes": "Description for User Two",
-      "description": "The Conference for CI/CD, Kubernetes Ecosystem, Agile & Lean Business",
-      "date": "October 8 – 9, 2024"
-    },
-    {
-      "link": "https://www.rsaconference.com/library/webcast/176-securing-ai",
-      "imageSrc": "https://www.teksystems.com/cdn-cgi/image/height=605,width=813,quality=95,format=webp/https://www.teksystems.com/-/media/teksystems/images/blogs/blog%20images/microlearning.png?iar=0&rev=a52dbfa380ad4523877d74bfacbf619f&hash=100CFFE850E379EE87623E8B04064536",
-      "userImageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC",
-      "username": "User Three",
-      "userDes": "Description for User Three",
-      "description": "Securing AI Like a Boss",
-      "date": "Sep. 11, 2024"
-    }
-  ]
-  const classActive = "border-b-2 px-6 border-[#FFAB2E] h-full items-center flex";
+  const dataForContentHub = {
+    "events": [
+      {
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSliF3XoIDPLq9MzY4adp9caGN98v3axTGMA&s",
+        "userImageSrc": "/images/profile_image.png", "username": "User One",
+        "userDes": "Description for User One",
+        "description": "The Biggest Technical AI conference in San Francisco",
+        "link": "https://www.ai.engineer/worldsfair?wt.mc_id=eventscatalog",
+        "date": "June 25-27 2024"
+      },
+      {
+        "link": "https://devopscon.io/new-york/",
+        "imageSrc": "https://devopscon.io/wp-content/uploads/2024/04/Header_Image-13.jpg",
+        "userImageSrc": "/images/profile_image.png", "username": "User Two",
+        "userDes": "Description for User Two",
+        "description": "The Conference for CI/CD, Kubernetes Ecosystem, Agile & Lean Business",
+        "date": "October 8 – 9, 2024"
+      },
+      {
+        "link": "https://www.rsaconference.com/library/webcast/176-securing-ai",
+        "imageSrc": "https://www.teksystems.com/cdn-cgi/image/height=605,width=813,quality=95,format=webp/https://www.teksystems.com/-/media/teksystems/images/blogs/blog%20images/microlearning.png?iar=0&rev=a52dbfa380ad4523877d74bfacbf619f&hash=100CFFE850E379EE87623E8B04064536",
+        "userImageSrc": "/images/profile_image.png", "username": "User Three",
+        "userDes": "Description for User Three",
+        "description": "Securing AI Like a Boss",
+        "date": "Sep. 11, 2024"
+      }
+    ],
+    "blogs": [
+      {
+        "link": "https://www.example.com/blogs/understanding-ai",
+        "imageSrc": "/images/AI.jpg",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User One",
+        "userDes": "Description for User One",
+        "description": "Understanding AI and Its Applications",
+        "date": "Jun. 21, 2024"
+      },
+      {
+        "link": "https://www.example.com/blogs/future-of-tech",
+        "imageSrc": "/images/fut_of_tech.jpeg",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User Two",
+        "userDes": "Description for User Two",
+        "description": "The Future of Technology: Trends and Predictions",
+        "date": "Jul. 15, 2024"
+      },
+      {
+        "link": "https://www.rsaconference.com/library/webcast/176-securing-ai",
+        "imageSrc": "https://www.teksystems.com/cdn-cgi/image/height=605,width=813,quality=95,format=webp/https://www.teksystems.com/-/media/teksystems/images/blogs/blog%20images/microlearning.png?iar=0&rev=a52dbfa380ad4523877d74bfacbf619f&hash=100CFFE850E379EE87623E8B04064536",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User Three",
+        "userDes": "Description for User Three",
+        "description": "Securing AI Like a Boss",
+        "date": "Sep. 11, 2024"
+      }
+    ],
+    "news": [
+      {
+        "link": "https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/",
+        "imageSrc": "https://blogs.microsoft.com/wp-content/uploads/prod/2023/10/MSCFS-graphic-2.png",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User One",
+        "userDes": "Description for User One",
+        "description": "Microsoft and G42 partner to accelerate AI innovation in UAE and beyond",
+        "date": "Apr 15, 2024"
+      },
+      {
+        "link": "https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/",
+        "imageSrc": "https://blogs.microsoft.com/wp-content/uploads/prod/2023/10/MSCFS-graphic-2.png",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User Two",
+        "userDes": "Description for User Two",
+        "description": "RSA Conference 2024 Q&A: GitLab Will Showcase Its Comprehensive AI-powered DevSecOps Platform",
+        "date": "May 6 - 9, 2024"
+      },
+      {
+        "link": "https://vmblog.com/archive/2024/04/30/rsa-conference-2024-q-a-gitlab-will-showcase-its-comprehensive-ai-powered-devsecops-platform.aspx",
+        "imageSrc": "https://vmblog.com/images/VMblog-RSA2024.jpg",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "User Two",
+        "userDes": "Description for User Two",
+        "description": "RSA Conference 2024 Q&A: GitLab Will Showcase Its Comprehensive AI-powered DevSecOps Platform",
+        "date": "May 6 - 9, 2024"
+      }
+    ],
+    "case_study": [
+      {
+        "link": "https://www.example.com/case-studies/successful-marketing-campaign",
+        "imageSrc": "/images/marketing.png",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "Analyst One",
+        "userDes": "Marketing Expert",
+        "description": "How a Successful Marketing Campaign Increased Brand Awareness",
+        "date": "Apr. 10, 2024"
+      },
+      {
+        "link": "https://www.example.com/case-studies/effective-employee-training",
+        "imageSrc": "/images/training.png",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "Analyst Two",
+        "userDes": "HR Specialist",
+        "description": "Effective Employee Training Programs and Their Impact",
+        "date": "May. 22, 2024"
+      },
+      {
+        "link": "https://www.example.com/case-studies/sustainability-initiatives",
+        "imageSrc": "/images/sus_cons.jpeg",
+        "userImageSrc": "/images/profile_image.png",
+        "username": "Analyst Three",
+        "userDes": "Sustainability Consultant",
+        "description": "Implementing Successful Sustainability Initiatives in Corporations",
+        "date": "Jun. 30, 2024"
+      }
+    ]
+  }
+
+  const [activeContentType, setActiveContentType] = useState("blogs");
+  const classActive = "border-b-2 md:px-6 border-[#FFAB2E] h-full items-center cursor-pointer flex";
+  const classUnactive = "cursor-pointer md:px-6 h-full items-center flex hover:border-b-2 hover:border-[#FFAB2E]"
   return (
     <div className="h-min-[100vh] space-y-[40px] md:space-y-[60px] bg-white">
       {
@@ -88,7 +178,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-black space-y-2">
-        <div className="w-full flex items-center justify-center flex-col">
+        <div className="w-full flex items-center justify-center flex-col space-y-4">
           <h1 className="text-center tracking-wide text-2xl font-bold md:text-4xl text-gray-600">Key <span className="text-[#FFAB2E]">Benefits</span></h1>
           <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70%] w-[100%]">Tailored IT Solutions for Seamless Operations, Reliable Support, Cybersecurity Expertise, Innovation-driven Approach, Client-Centric Services, Proven Results.</p>
         </div>
@@ -168,15 +258,15 @@ export default function Home() {
       <div className="text-gray-600 w-full space-y-6 flex flex-col justify-between items-center">
         <h1 className="text-4xl text-center font-bold">Content <span className="text-[#FFAB2E]">Hub</span></h1>
         <ul className="w-full flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
-          <li className={classActive}>Blog</li>
-          <li>News</li>
-          <li>Case Study</li>
-          <li>Events</li>
+          <li className={activeContentType === "blogs" ? classActive : classUnactive} onClick={() => setActiveContentType("blogs")}>Blog</li>
+          <li className={activeContentType === "news" ? classActive : classUnactive} onClick={() => setActiveContentType("news")}>News</li>
+          <li className={activeContentType === "case_study" ? classActive : classUnactive} onClick={() => setActiveContentType("case_study")}>Case Study</li>
+          <li className={activeContentType === "events" ? classActive : classUnactive} onClick={() => setActiveContentType("events")}>Events</li>
         </ul>
 
         <div className="flex flex-col p-4 md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
           {
-            events.map((event, idx) => {
+            dataForContentHub[activeContentType].map((event, idx) => {
               return <ContentCard key={idx} content={event} />
             })
           }

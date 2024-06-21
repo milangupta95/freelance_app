@@ -57,8 +57,9 @@ export const Footer = () => {
                         <ul className='list-style-none space-y-2'>
                             <li className='flex justify-center lg:justify-start space-x-4 items-center'><CiPhone />+91-012-4496-0635</li>
                             <li className='flex justify-center lg:justify-start space-x-4 items-center'><MdOutlineEmail />info@intellivectra.tech</li>
-                            <li className='flex justify-center lg:justify-start'><CiLocationOn />
-                                <span>
+                            <li className='flex justify-center items-start lg:justify-start'>
+                                <CiLocationOn />
+                                <span className="mt-[-5px]">
                                     2nd Floor, Plot no. 29,<br />
                                     Maruti Industrial Area,<br />
                                     Sector-18,Gurugram-<br />
@@ -79,9 +80,6 @@ export const Footer = () => {
                     <div className='flex items-center space-x-4 text-white'>
                         <SocialIcon>
                             <FaLinkedin size={20} />
-                        </SocialIcon>
-                        <SocialIcon>
-                            <FaFacebook size={20} />
                         </SocialIcon>
                         <SocialIcon>
                             <FaTwitter size={20} />
