@@ -7,21 +7,38 @@ import EmblaCarousel from "@/Components/Corousel/EmblaCarousel";
 export default function Page() {
     const slides = [
         {
-            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            text_content: "Our journey began with a vision to revolutionize the way people connect with technology. Founded in 2018, we set out to democratize access to cutting-edge technology solutions for businesses of all sizes. Our mission was clear to empower organizations to thrive in the digital age by providing innovative, scalable, and user-friendly IT solutions.",
             image_src: "/images/slider1image.png",
             heading: "Duis aute irure dolor"
         },
         {
-            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            text_content: "IVT's successful acquisition of its first major project bolstered its industry standing, highlighting the team's expertise and unwavering commitment to excellence in solution delivery.",
             image_src: "/images/slide2image.png",
-            heading: "irure dolor"
         },
         {
-            text_content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            text_content: "Since our inception, we've achieved several milestones that have shaped our journey. Expanding our global reach to India in 2020, each milestone represents a significant step forward in our commitment to democratizing access to technology solutions worldwide. These expansions not only solidify our presence in key markets but also enable us to better serve our diverse customer base and fulfill our mission of empowering organizations to thrive in the digital age.",
             image_src: "/images/slide3image.png",
-            heading: "Duis aute"
+        },
+        {
+            text_content: "Strengthened our business portfolio by forging strategic alliances and expanding service offerings in Cybersecurity Solutions & Services, reinforcing our dedication to digital resilience.",
+            image_src: "/images/slider1image.png",
+        },
+        {
+            text_content: "Diversified our business portfolio with AI & DevOps Solutions through strategic alliances and service offerings.",
+            image_src: "/images/slide2image.png",
+        },
+        {
+            text_content: "The launch of IVT 2.0 heralded a new era, unveiling a revamped office space aimed at nurturing innovation, collaboration, and expansion.",
+            image_src: "/images/slide3image.png",
+        },
+        {
+            text_content: "IVT's expansion into the Kingdom of Saudi Arabia underscores its commitment to establishing a comprehensive regional presence, prioritizing accessibility, and exceeding client expectations regionwide.",
+            image_src: "/images/slider1image.png",
         },
     ];
+
+    const posi = [0, 16, 32, 48, 64, 80, 96];
+    const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
     const OPTIONS = {
         loop: true
     };
@@ -30,7 +47,7 @@ export default function Page() {
 
     return (
         <div className='space-y-[30px] bg-white'>
-            <PageStarter tit1Col={"black"} tit1={"About"} tit2={" Us"} imageSrc={"/images/banners/aboutusbanner.jpg"} descColor={"black"} desc={"Intelli Vectra Technologies offers comprehensive Digital Infrastructure, Business Analytics, Cloud, Security, and Emerging solutions that empower SMEs, enterprises, and government clients to unlock new digital revenue opportunities, enhance customer experiences across channels, and gain valuable data insights."} />
+            <PageStarter tit1Col={"black"} tit1={"About"} tit2={" Us"} imageSrc={"/images/banners/aboutusbanner.jpg"} descColor={"black"} desc={"Intelli Vectra Technologies drives digital transformation with cutting-edge IT solutions. We simplify complexities, ensuring operational efficiency and growth. Committed to excellence and customer-centricity, we foster collaboration and innovation to help businesses thrive in a rapidly evolving digital landscape."} />
 
             <div className="w-full px-4 md:px-10 lg:px-20 space-y-6 bg-white text-black flex flex-col lg:flex-row items-center justify-center md:space-x-20">
                 <div className="relative w-full lg:w-[40%] h-[300px] lg:h-[600px]">
@@ -45,14 +62,9 @@ export default function Page() {
                     <h1 className="px-2 text-[#F19F1F] text-[36px]">Welcome to IVT</h1>
                     <div>
                         <p className="text-[16px] text-[#3F444D]">
-                            Intelli Vectra Technologies offers comprehensive Digital Infrastructure, Business Analytics, Cloud, Security, and Emerging solutions that empower SMEs, enterprises, and government clients to unlock new digital revenue opportunities, enhance customer experiences across channels, and gain valuable data insights. Our strong partnerships with top technology providers enable us to deliver solutions that align IT investments with business goals, making technology work harder and smarter for our clients.
+                            Welcome to Intelli Vectra Technologies! We are thrilled to have you here. As a leading IT solutions provider, we are dedicated to helping businesses harness the power of technology to drive digital transformation and simplify IT complexities. Our mission is to deliver innovative, tailored solutions that not only meet but exceed your expectations. With a commitment to excellence, integrity, and customer-centricity, we focus on fostering collaboration and continuous improvement. Our team of experts works tirelessly to ensure operational efficiency, enhanced security, and sustainable growth for our clients. At Intelli Vectra Technologies, we believe in the transformative potential of technology to create a brighter, more connected future for all. Together, let's shape the future of your business.
                         </p>
-                        <p className="text-[16px] text-[#3F444D]">
-                            Our mission is to drive economic value for our clients by guiding their digital transformation with world-class, secure, agile, and cloud-ready infrastructure solutions. We provide expert services throughout the entire lifecycle, including strategy, consulting, design, implementation, and ongoing support.
-                        </p>
-                        <p className="text-[16px] text-[#3F444D]">
-                            Staying at the forefront of IT advancements, we ensure our clients benefit from a wide array of technologies and leading-edge solutions. Collaborating with both established market leaders and innovative emerging providers, we deliver tailored, integrated, and multi-technology solutions that meet the unique needs of each client.
-                        </p>
+
                     </div>
                     <Button buttonText={"Learn More"} />
                 </div>
@@ -64,7 +76,7 @@ export default function Page() {
                         <h1 className="text-center text-black text-2xl md:text-4xl font-extralight"><span className="text-white">Our</span> Journey</h1>
                         <p className="text-center text-[#3F444D] font-extralight">Embark on a seamless journey with our IT services.</p>
                     </div>
-                    <EmblaCarousel slides={slides} options={OPTIONS} />
+                    <EmblaCarousel posi={posi} years={years} slides={slides} options={OPTIONS} />
                 </div>
             </div>
 
@@ -98,18 +110,18 @@ export default function Page() {
                         <div className="flex justify-center">
                             <div className="w-[150px] lg:w-[400px]">
                                 <h1 className="text-sm md:text-lg text-center font-semibold">Consult & Envision</h1>
-                                <p className="font-extralight text-center text-[7px] md:text-[15px]">We’ll work closely to develop a strategic roadmap and align our technology to your business requirements, so you can reach your goals.</p>
+                                <p className="font-extralight text-center text-[7px] md:text-[15px]"> Through strategic planning and innovative thinking, we envision tailored solutions aligning with your growth and efficiency vision.</p>
                             </div>
                         </div>
 
                         <div className="flex justify-between">
                             <div className="w-[150px] lg:w-[400px]">
                                 <h1 className="text-sm md:text-lg text-center font-semibold">Manage & Improve</h1>
-                                <p className="font-extralight text-center text-[7px] md:text-[15px]">You’ll have consistent access to managed, reported & monitored services, as well as dedicated consulting to ensure proactive, continuous improvements with strategic improvement planning.</p>
+                                <p className="font-extralight text-center text-[7px] md:text-[15px]"> We employ proactive monitoring, agile methodologies, and responsive support to ensure seamless operation and optimization of your technology infrastructure.</p>
                             </div>
                             <div className="w-[150px] lg:w-[400px]">
                                 <h1 className="md:text-lg text-sm text-center font-semibold">Build & Implement</h1>
-                                <p className="font-extralight text-center text-[7px] md:text-[15px]">Our experts will focus on  implementing your chosen  solutions effectively in a way    that will create powerful and transformative business change.</p>
+                                <p className="font-extralight text-center text-[7px] md:text-[15px]"> Our comprehensive approach guarantees reliable implementation and ongoing support, empowering your business with innovative capabilities for sustained growth.</p>
                             </div>
                         </div>
                     </div>
@@ -126,13 +138,13 @@ export default function Page() {
                     <div className="p-4 md:p-16 bg-[#FFFAF2] w-full md:w-[50%] space-y-4 md:space-y-6">
                         <h1 className="text-2xl md:text-4xl tracking-widest font-extralight">Our <span className="text-[#F19F1F]">Mission</span></h1>
                         <p className="text-base md:text-xl font-extralight tracking-widest">
-                            At Intelli Vectra Solutions, our mission is to revolutionize the digital landscape by providing innovative IT solutions that empower businesses to thrive in the modern era. We are committed to simplifying complexities, driving digital transformation, and maximizing value for our clients.
+                            Our mission at Intelli Vectra Technologies is to drive digital transformation by delivering innovative, tailored IT solutions. We strive to simplify complexities, optimize efficiency, and enhance security for businesses across diverse industries. With a commitment to excellence, integrity, and customer satisfaction, we empower our clients to achieve sustainable growth and success in a rapidly evolving technological landscape.
                         </p>
                     </div>
                     <div className="p-4 md:p-16 bg-[#FFFAF2] w-full md:w-[50%] space-y-4 md:space-y-6">
                         <h1 className="text-2xl md:text-4xl tracking-widest font-extralight">Our <span className="text-[#F19F1F]">Vision</span></h1>
                         <p className="text-base md:text-xl font-extralight tracking-widest">
-                            Our vision at Intelli Vectra Solutions is to be the forefront leader in the IT industry, renowned for our transformative solutions that enable organizations to harness the full potential of technology. We strive to be the trusted partner for businesses seeking sustainable growth and competitive advantage in the digital age.
+                            Our vision at Intelli Vectra Technologies is to be the forefront catalyst of global digital transformation. We aspire to pioneer cutting-edge technological advancements that empower businesses and individuals alike. Through innovation, integrity, and a commitment to excellence, we envision creating a connected world where technology fosters inclusive growth, transforms industries, and enriches lives on a global scale.
                         </p>
                     </div>
                 </div>

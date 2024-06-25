@@ -15,7 +15,7 @@ export default function Page() {
   const [phone, setPhone] = React.useState("")
   const [subject, setSubject] = React.useState("")
   const [message, setMessage] = React.useState("");
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,7 +66,7 @@ export default function Page() {
   };
   return (
     <div className="w-full">
-      <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
+      <PageStarter tit1={"Contact"} tit2={" Us"} tit1Col={"black"} descColor={"black"} imageSrc={"/images/contactusback.jpg"} desc={"Have questions or interested in partnering with Intelli Vectra Technology? Contact us today for personalized IT solutions and expert consultation tailored to your business needs."}></PageStarter>
       <div className='bg-[#FFFAF2] w-full md:py-8 space-y-2 md:px-32 md:space-y-8'>
         <h1 className='text-center text-3xl underline font-bold text-[#FFC872] '> Get In Touch </h1>
         <div className='flex p-4 flex-col md:flex-row-reverse space-y-4 md:space-y-0 md:space-x-4 w-full justify-center items-center'>
@@ -139,16 +139,6 @@ export default function Page() {
 
       <div className='flex flex-col md:flex-row items-end justify-center w-full bg-white'>
         <div className='space-y-4 flex flex-col justify-center'>
-          <Image src="/images/indiagate.jpg" height={300} width={500} />
-          <h1 className='text-4xl text-[#F19F1F] text-center'>Haryana, India</h1>
-          <p className='text-[#3F444D] text-center font-extralight'>2nd Floor, Plot No. 29,<br />
-            Maruti Industrial Area, Sector-18,<br />
-            Gurugram–122015 (Haryana).</p>
-          <div className='flex justify-center w-full'>
-            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
-          </div>
-        </div>
-        <div className='space-y-4 flex flex-col justify-center'>
           <Image src="/images/burzkhalifa.jpg" height={300} width={500} />
           <h1 className='text-4xl text-[#F19F1F] text-center'>Dubai, UAE</h1>
           <p className='text-[#3F444D] text-center font-extralight'>Office #1111,<br />
@@ -158,6 +148,37 @@ export default function Page() {
             <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
           </div>
         </div>
+        <div className='space-y-4 flex flex-col justify-center'>
+          <Image src="/images/indiagate.jpg" height={300} width={500} />
+          <h1 className='text-4xl text-[#F19F1F] text-center'>Delhi NCR, India</h1>
+          <p className='text-[#3F444D] text-center font-extralight'>2nd Floor, Plot No. 29,<br />
+            Maruti Industrial Area, Sector-18,<br />
+            Gurugram–122015 (Haryana).</p>
+          <div className='flex justify-center w-full'>
+            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+          </div>
+        </div>
+        <div className='space-y-4 flex flex-col justify-center'>
+          <Image src="/images/indiagate.jpg" height={300} width={500} />
+          <h1 className='text-4xl text-[#F19F1F] text-center'>Riyadh,Saudi Arabia</h1>
+          <p className='text-[#3F444D] text-center font-extralight'>Samama Tower<br />
+          King Fahd Road,Riyadh<br />
+          Kingdom of Saudi Arabia 29</p>
+          <div className='flex justify-center w-full'>
+            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+          </div>
+        </div>
+        <div className='space-y-4 flex flex-col justify-center'>
+          <Image src="/images/burzkhalifa.jpg" height={300} width={500} />
+          <h1 className='text-4xl text-[#F19F1F] text-center'>London,UK</h1>
+          <p className='text-[#3F444D] text-center font-extralight'>Coming Soon<br />
+            <br />
+            </p>
+          <div className='flex justify-center w-full'>
+            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+          </div>
+        </div>
+
       </div>
     </div>
 

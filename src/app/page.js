@@ -131,7 +131,7 @@ export default function Home() {
       {
         // Starter Layout
       }
-      <PageStarter tit1={"BUSINESS"} imageSrc={"images/frontpageimage.jpg"} tit2={" & ENTERPRISE HUB"} tit1Col={"#F19F1F"} desc={"Simplify complexity and drive digital transformation with Intelli Vectra Technologies’ innovative IT solutions for sustainable business growth."} descColor={"white"} />
+      <PageStarter tit1={"BUSINESS"} imageSrc={"images/frontpageimage.jpg"} tit2={" & ENTERPRISE HUB"} tit1Col={"#F19F1F"} desc={"Empowering businesses with agile, transparent, and innovative technology solutions, Intelli Vectra Technologies drives success through collaboration and passionate expertise."} descColor={"white"} />
       {
         // About Layout
       }
@@ -162,7 +162,7 @@ export default function Home() {
           <p className="text-[#F19F1F] md:text-4xl text-2xl tracking-wide">Empowering Digital Transformation with Innovative IT Solutions</p>
 
           <p className="md:text-[18px] text-normal text-[#3F444]">
-            Intelli Vectra Technologies is a leading IT solutions provider dedicated to helping clients harness technology innovation and simplify IT complexities. Our mission is to enable digital transformation and maximize return on IT investment. By leveraging cutting-edge technologies and delivering tailored solutions, Intelli Vectra Technologies empowers businesses to stay ahead in the rapidly evolving digital landscape. Our expertise spans across various domains, ensuring that our clients achieve operational efficiency, enhanced security, and sustainable growth
+            Intelli Vectra Technologies is a premier IT solutions provider committed to helping clients harness the power of technology innovation while simplifying IT complexities. Our mission is to drive digital transformation and maximize return on IT investments. Leveraging cutting-edge technologies and delivering customized solutions, we empower businesses to stay ahead in an ever-evolving digital landscape. Our expertise spans various domains, ensuring operational efficiency, enhanced security, and sustainable growth for our clients. At Intelli Vectra Technologies, we prioritize collaboration, transparency, and passion, making us a trusted partner in achieving your business goals and driving meaningful change.
           </p>
           <div className="w-full h-6 bg-white"></div>
           <Link href="/about"><Button buttonText={"Learn More"} /></Link>
@@ -186,19 +186,19 @@ export default function Home() {
           <BenifitCard
             imagesrc={"/images/bp2.png"}
             title={"CUSTOMER FOCUS"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+            description={"From the initial consultation to ongoing support, we listen intently, communicate transparently, and remain dedicated to delivering outcomes that exceed your expectations."} />
           <BenifitCard
             imagesrc={"/images/bp1.png"}
             title={"TRANSPARENCY"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+            description={"We are committed to upholding the highest standards of integrity and accountability in everything we do, ensuring that our relationships are built on trust and a shared commitment."} />
           <BenifitCard
             imagesrc={"/images/bp3.png"}
             title={"AGILITY & PASSION"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+            description={"We embrace agility to swiftly adapt to dynamic business landscapes, ensuring innovative solutions and efficient outcomes with our unwavering passion for technology that fuels creativity and dedication."} />
           <BenifitCard
             imagesrc={"/images/bp4.png"}
             title={"COLLABORATION"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+            description={" We cultivate teamwork internally and with clients and partners to achieve superior outcomes and lasting value through shared expertise and mutual respect."} />
         </div>
       </div>
       <div className="w-full p-4 flex items-center justify-center">
@@ -237,7 +237,7 @@ export default function Home() {
           <div className="w-full md:w-[45%] space-y-8">
             <div className="space-y-4 flex flex-col justify-center items-center w-full">
               <h1 className="text-center text-2xl md:text-4xl font-bold">Our <span className="text-[#F19F1F]">Achievements</span></h1>
-              <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70vw] w-[95vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+              <p className="font-extralight text-sm md:text-xl tracking-wide text-center md:w-[70vw] w-[95vw]">Our achievements at Intelli Vectra Technologies reflect our commitment to innovation, client satisfaction, and transformative impact in technology solutions.</p>
             </div>
             <div className="flex flex-row justify-center">
               <div className="p-8 text-center space-y-4 border-r">

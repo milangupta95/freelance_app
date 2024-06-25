@@ -16,7 +16,7 @@ export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const router = useRouter();
-    const classActive = "flex items-center pb-2 space-x-4 text-[#FFAB2E] px-2 border-b-2 border-[#FFAB2E]";
+    const classActive = "flex items-center pb-2 text-[#FFAB2E] space-x-4 px-2 border-b-2 border-[#FFAB2E]";
     const classUnActive = "flex items-center pb-2 space-x-4 text-black transition-all px-2 duration-300 hover:text-[#FFAB2E] hover:border-b-2 hover:border-[#FFAB2E]";
     const [showContentInner, setShowContentInner] = useState(false);
     const handleClickOutside = (event) => {
@@ -56,7 +56,7 @@ export const Navbar = () => {
                         {isMenuOpen ? <IoMdClose size={24} /> : <RiMenu2Fill size={24} />}
                     </button>
                 </div>
-                <div ref={menuRef} className={`lg:flex lg:flex-row ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center absolute lg:static top-[70px] right-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 bg-white lg:w-auto lg:bg-transparent p-4 lg:p-0 w-fit
+                <div ref={menuRef} className={`lg:flex lg:flex-row ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center absolute lg:static top-[70px] right-0 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-80 bg-white lg:w-auto lg:bg-transparent p-4 lg:p-0 w-fit
     ${isMenuOpen ? 'slide-in-right' : 'slide-out-right'} transition-all duration-300 ease-in-out md:transition-none md:w-auto`}>
                     <ul className='flex-col lg:flex-row flex space-y-4 lg:space-y-0 lg:space-x-6 cursor-pointer list-style-none text-gray-600 w-full lg:w-auto'>
                         <Link href="/"><li className={`${pathname === '/' ? classActive : classUnActive}`}>Home</li></Link>
@@ -75,7 +75,7 @@ export const Navbar = () => {
 
 
             </div>
-            <div className={`transition-all md:transition-none duration-1000 transform ${showContentInner ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} bg-white z-[100] text-black md:w-fit w-[50%] absolute md:top-10 top-[310px] md:shadow-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 md:bg-opacity-100 md:right-40 right-0 md:rounded-lg p-4`}>
+            <div className={`transition-all md:transition-none duration-1000 transform ${showContentInner ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} bg-white z-[100] text-black md:w-fit w-[50%] absolute md:top-10 top-[310px] md:shadow-lg bg-clip-padding backdrop-filter backdrop-blur-sm  bg-opacity-90 md:bg-opacity-100 md:right-40 right-0 md:rounded-lg p-4`}>
                 <ul className="space-y-4">
                     <li onClick={
                         () => {

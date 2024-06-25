@@ -10,17 +10,16 @@ import {
 import { BiDownArrow } from "react-icons/bi";
 
 const EmblaCarousel = (props) => {
-    const { slides, options } = props
+    const { slides, options,posi,years } = props
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [
         Autoplay({ playOnInit: true, delay: 2000 })
     ]);
-    const posi = [0, 50, 92];
-    const years = [2022, 2023, 2024];
+    
     const [posIdx, setPosIdx] = useState(0)
 
     useEffect(() => {
         const handleInterval = () => {
-            setPosIdx((posIdx) => ((posIdx + 1) % 3))
+            setPosIdx((posIdx) => ((posIdx + 1) % (years.length)))
             console.log('Event triggered');
         };
 
@@ -97,12 +96,11 @@ const EmblaCarousel = (props) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((slide,idx) => (
-                        <div key={idx} className="md:space-x-8 flex md:flex-row flex-col justify-between embla__slide">
+                        <div key={idx} className="md:space-x-8 flex md:flex-row flex-col justify-between items-start md:items-center embla__slide">
                             <div className="md:w-[50%] w-[100%] relative h-[200px]">
                                 <Image src={slide.image_src} layout='fill'></Image>
                             </div>
                             <div className="md:w-[50%] w-[100%] space-y-4">
-                                <h1 className='text-4xl'>{slide.heading}</h1>
                                 <p>{slide.text_content}</p>
                             </div>
                         </div>

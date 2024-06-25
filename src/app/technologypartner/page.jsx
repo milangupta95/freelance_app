@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Page = () => {
     return (
         <div className="text-black bg-white space-y-4">
-            <PageStarter tit1={"Technology Partner"} tit2={""} tit1Col={"black"} descColor={"black"} imageSrc={"/images/blogsHeader.jpg"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"}></PageStarter>
+            <PageStarter tit1={"Technology Partner"} tit2={""} tit1Col={"black"} descColor={"black"} imageSrc={"/images/blogsHeader.jpg"} desc={"Intelli Vectra Technology partners with leading innovators to deliver cutting-edge solutions, driving digital transformation and maximizing business efficiency and growth."}></PageStarter>
             <div className="w-full p-4 flex items-center justify-center">
                 <div className="w-full text-gray-600 space-y-10 bg-[#FFFAF2] py-12 flex flex-col">
                     <div className="w-full space-y-2">

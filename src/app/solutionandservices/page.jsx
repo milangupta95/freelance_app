@@ -16,7 +16,7 @@ export default function Page() {
         <div>
             {/* PageStarter component with optimized props */}
             <PageStarter
-                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                desc=" Intelli Vectra Technology provides tailored solutions and services that simplify IT complexities, optimize operations, and drive sustainable growth for businesses."
                 tit1="Solution and Services"
                 tit2=""
                 tit1Col="white"
@@ -42,12 +42,7 @@ export default function Page() {
                         <span className="text-black">Solutions</span> & Services
                     </h1>
                     <p className="text-lg text-[#3F444] font-extralight">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        Intelli Vectra Technology offers comprehensive solutions and services designed to simplify IT complexities and drive business success. From custom software development and IT consulting to cloud solutions and cybersecurity, we deliver tailored strategies that optimize operations and enhance efficiency. Our approach combines cutting-edge technology with industry expertise, ensuring scalable solutions that meet diverse business needs. Partner with us to navigate the digital landscape with confidence and achieve lasting growth.
                     </p>
                 </div>
             </div>
