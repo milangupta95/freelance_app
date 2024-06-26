@@ -94,13 +94,13 @@ export default function Page() {
               </form>
             </div>
           </div>
-          <div className='w-full md:grid-cols-1 grid grid-cols-2 gap-1 gap-y-2 md:w-[25%]'>
+          <div className='w-full md:grid-cols-1 grid grid-cols-1 gap-1 gap-y-2 md:w-[25%]'>
             <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaPhoneAlt style={{ fontSize: '30px' }} /></div>
               <div className='text-black text-sm font-extralight'>
                 <p>24*7 Services</p>
                 <p className="text-[#F19F1F] font-normal">Call Us On</p>
-                <p>Tel: 012-4496-0635</p>
+                <a className='underline cursor-pointer' href='tel:012-4496-0635'>012-4496-0635</a>
               </div>
             </div>
             <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
@@ -108,7 +108,7 @@ export default function Page() {
               <div className='text-black text-sm font-extralight'>
                 <p>Drop a Line</p>
                 <p className="text-[#F19F1F] font-normal">Mail Address</p>
-                <p>info@intellivectra.tech</p>
+                <a className='underline cursor-pointer' href='mailto:info@intellivectra.tech'>info@intellivectra.tech</a>
               </div>
             </div>
             <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
@@ -129,8 +129,7 @@ export default function Page() {
               <div className="text-black font-extralight text-sm">
                 <p>Office Hours</p>
                 <p className="text-[#F19F1F] font-normal text-xs">Opening Time</p>
-                <p>Mon - Fri : 9am - 8pm</p>
-                <p>Sat - Sun (Closed)</p>
+                <p>Mon - Fri : 9.30am - 5.30pm</p>
               </div>
             </div>
           </div>
@@ -145,7 +144,7 @@ export default function Page() {
             Clover Bay Tower, Business Bay,<br />
             PO Box: 283426, Dubai, UAE</p>
           <div className='flex justify-center w-full'>
-            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+            <button className='bg-[#F19F1F] p-2 w-fit'>Get Directions</button>
           </div>
         </div>
         <div className='space-y-4 flex flex-col justify-center'>
@@ -155,17 +154,18 @@ export default function Page() {
             Maruti Industrial Area, Sector-18,<br />
             Gurugram–122015 (Haryana).</p>
           <div className='flex justify-center w-full'>
-            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+            <button className='bg-[#F19F1F] p-2 w-fit'>Get Directions</button>
           </div>
         </div>
         <div className='space-y-4 flex flex-col justify-center'>
           <Image src="/images/indiagate.jpg" height={300} width={500} />
           <h1 className='text-4xl text-[#F19F1F] text-center'>Riyadh,Saudi Arabia</h1>
           <p className='text-[#3F444D] text-center font-extralight'>Samama Tower<br />
-          King Fahd Road,Riyadh<br />
-          Kingdom of Saudi Arabia 29</p>
+            King Fahd Road,Riyadh<br />
+            Kingdom of Saudi Arabia 29
+          </p>
           <div className='flex justify-center w-full'>
-            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+            <button className='bg-[#F19F1F] p-2 w-fit'>Get Directions</button>
           </div>
         </div>
         <div className='space-y-4 flex flex-col justify-center'>
@@ -175,7 +175,7 @@ export default function Page() {
             <br />
             </p>
           <div className='flex justify-center w-full'>
-            <button className='bg-[#F19F1F] p-4 w-fit'>Get Directions</button>
+            <button className='bg-[#F19F1F] p-2 w-fit'>Get Directions</button>
           </div>
         </div>
 

@@ -18,7 +18,7 @@ export default function Page() {
                 <div className="space-y-4 w-[70vw]">
                     <h1 className="text-4xl text-center text-black font-bold">Be a part of our mission</h1>
                     <p className="text-black text-center font-extralight">
-                        Be a vital part of Intelli Vectra Technology's mission to lead digital transformation globally. Join us in creating impactful solutions that empower businesses and shape the future of technology.
+                        Be a vital part of Intelli Vectra Technology mission to lead digital transformation globally. Join us in creating impactful solutions that empower businesses and shape the future of technology.
                     </p>
                 </div>
                 <div className="w-full flex flex-col md:flex-row">
@@ -26,7 +26,7 @@ export default function Page() {
                         <Image src="/images/nowhiring.jpg" layout="fill" />
                     </div>
                     <div className="md:w-[50%] w-[100%] bg-[#FFDFAD] p-16 py-16 space-y-8">
-                        <p className="text-black tracking-widest font-extralight">We're expanding our team at Intelli Vectra Technology and looking for driven individuals like you to join us. Explore rewarding career opportunities and apply your skills to shape the future of IT solutions. Whether you're an experienced professional or new to the field, we invite you to be part of our innovative journey. Apply now and make an impact with us.</p>
+                        <p className="text-black tracking-widest font-extralight">We are expanding our team at Intelli Vectra Technology and looking for driven individuals like you to join us. Explore rewarding career opportunities and apply your skills to shape the future of IT solutions. Whether you are an experienced professional or new to the field, we invite you to be part of our innovative journey. Apply now and make an impact with us.</p>
                         <button onClick={moveToApply} className="py-2 bg-[#F19F1F] font-light px-8">Apply</button>
                     </div>
                 </div>
