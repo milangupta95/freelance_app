@@ -89,31 +89,31 @@ export default function Page() {
                   <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message' rows={3} className='w-full p-2 font-extralight col-span-4 border border-black '></textarea>
                 </div>
                 <div className='flex items-center justify-end'>
-                  <button disabled={loading} onClick={handleSubmit} className='p-4 bg-[#F19F1F] tracking-wide text-white disabled:bg-gray-200 disabled:text-white'>{loading ? "Loading..." : "Submit"}</button>
+                  <button disabled={loading} onClick={handleSubmit} className='p-2 bg-[#F19F1F] tracking-wide text-white disabled:bg-gray-200 disabled:text-white'>{loading ? "Loading..." : "Submit"}</button>
                 </div>
               </form>
             </div>
           </div>
           <div className='w-full md:grid-cols-1 grid grid-cols-1 gap-1 gap-y-2 md:w-[25%]'>
-            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-between space-x-4 shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaPhoneAlt style={{ fontSize: '30px' }} /></div>
-              <div className='text-black text-sm font-extralight'>
+              <div className='text-black w-[90%] text-sm font-extralight'>
                 <p>24*7 Services</p>
                 <p className="text-[#F19F1F] font-normal">Call Us On</p>
                 <a className='underline cursor-pointer' href='tel:012-4496-0635'>012-4496-0635</a>
               </div>
             </div>
-            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-between space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><MdEmail style={{ fontSize: '30px' }} /></div>
-              <div className='text-black text-sm font-extralight'>
+              <div className='text-black w-[90%] text-sm font-extralight'>
                 <p>Drop a Line</p>
                 <p className="text-[#F19F1F] font-normal">Mail Address</p>
                 <a className='underline cursor-pointer' href='mailto:info@intellivectra.tech'>info@intellivectra.tech</a>
               </div>
             </div>
-            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-between space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaLocationDot style={{ fontSize: '30px' }} /></div>
-              <div className="text-black font-extralight">
+              <div className="text-black  w-[90%] font-extralight">
                 <p className="text-xs">Location</p>
                 <p className="text-[#F19F1F] font-normal text-xs">Visit Us At</p>
                 <p className="text-xs">
@@ -124,9 +124,9 @@ export default function Page() {
 
               </div>
             </div>
-            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-center space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
+            <div className='md:h-[100px] h-full p-2 flex items-center md:justify-between space-x-4  shadow-lg md:w-[250px] w-full bg-white rounded-lg'>
               <div className="p-4 rounded-[50%] bg-[#FFAE2F]"><FaRegClock style={{ fontSize: '30px' }} /></div>
-              <div className="text-black font-extralight text-sm">
+              <div className="text-black  w-[90%] font-extralight text-sm">
                 <p>Office Hours</p>
                 <p className="text-[#F19F1F] font-normal text-xs">Opening Time</p>
                 <p>Mon - Fri : 9.30am - 5.30pm</p>
