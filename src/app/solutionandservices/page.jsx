@@ -49,7 +49,7 @@ export default function Page() {
 
             {/* Service navigation section */}
             <div className="w-full bg-gradient-to-r from-white text-black via-[#F4F4F4] to-white">
-                <ul className="flex justify-center items-center space-x-12 h-16">
+                <ul className="md:flex hidden space-y-2 md:space-y-0 justify-center items-center md:space-x-12 space-x-1 md:h-16">
                     <NavItem
                         title="Technologies Solutions"
                         active={activeServIdx === 'technology'}
@@ -66,6 +66,13 @@ export default function Page() {
                         onClick={() => handleSetActive('staffing')}
                     />
                 </ul>
+                <div className='w-full px-4 md:hidden'>
+                    <select className='w-full bg-gray-100 text-center p-4 font-bold' onChange={(e) => handleSetActive(e.target.value)}>
+                        <option className='w-full bg-gray-100 ' value={"technology"}>Technology</option>
+                        <option className='w-full bg-gray-100 ' value={'pit'}>Professional IT Services</option>
+                        <option className='w-full bg-gray-100 ' value={'staffing'}> Staffing Services </option>
+                    </select>
+                </div>
             </div>
 
             {/* Service cards section */}
@@ -82,8 +89,8 @@ export default function Page() {
 
 // Navigation item component
 const NavItem = ({ title, active, onClick }) => {
-    const baseClasses = 'cursor-pointer px-6 h-full flex items-center';
-    const activeClasses = 'border-b-2 border-[#FFAB2E]';
+    const baseClasses = 'cursor-pointer px-6 h-full flex items-center text-center';
+    const activeClasses = 'border-b-2 border-[#FFAB2E] text-[#FFAB2E]';
     const inactiveClasses = 'hover:border-b-2 hover:border-[#FFAB2E]';
 
     return (

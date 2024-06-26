@@ -259,12 +259,21 @@ export default function Home() {
 
       <div className="text-gray-600 w-full space-y-6 flex flex-col justify-between items-center">
         <h1 className="text-4xl text-center font-bold">Content <span className="text-[#FFAB2E]">Hub</span></h1>
-        <ul className="w-full flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
+        <ul className="w-full hidden md:flex md:space-x-40 space-x-6 text-[#FFAB2E] items-center justify-center bg-gradient-to-r  from-white via-[#F4F4F4] to-white h-[50px]">
           <li className={activeContentType === "blogs" ? classActive : classUnactive} onClick={() => setActiveContentType("blogs")}>Blog</li>
           <li className={activeContentType === "news" ? classActive : classUnactive} onClick={() => setActiveContentType("news")}>News</li>
           <li className={activeContentType === "case_study" ? classActive : classUnactive} onClick={() => setActiveContentType("case_study")}>Case Study</li>
           <li className={activeContentType === "events" ? classActive : classUnactive} onClick={() => setActiveContentType("events")}>Events</li>
         </ul>
+
+        <div className='w-full px-4 md:hidden'>
+          <select className='w-full bg-gray-100 text-center p-4 font-bold' onChange={(e) => setActiveContentType(e.target.value)}>
+            <option className='w-full bg-gray-100 ' value={"blogs"}>Blogs</option>
+            <option className='w-full bg-gray-100 ' value={'news'}>News</option>
+            <option className='w-full bg-gray-100 ' value={'case_study'}>Case Study</option>
+            <option className='w-full bg-gray-100 ' value={'events'}>Events</option>
+          </select>
+        </div>
 
         <div className="flex flex-col p-4 md:flex-row space-y-2 md:space-y-0 md:space-x-10 items-center justify-center">
           {

@@ -13,7 +13,7 @@ export default function Page() {
   const [name, setName] = React.useState("")
   const [email, setEmail] = React.useState("")
   const [phone, setPhone] = React.useState("")
-  const [subject, setSubject] = React.useState("")
+  const [subject, setSubject] = React.useState("Customer Message")
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = useState(false);
 
@@ -78,12 +78,12 @@ export default function Page() {
             <div>
               <form className='space-y-4'>
                 <div className='flex items-center justify-between'>
-                  <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="name" />
-                  <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="email" />
+                  <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' className='w-[100%] p-2 font-extralight border border-black ' type="text" name="name" />
+
                 </div>
                 <div className='flex items-center justify-between'>
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="email" />
                   <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone No' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="phone" />
-                  <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Subject' className='w-[49%] p-2 font-extralight border border-black ' type="text" name="subject" />
                 </div>
                 <div>
                   <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message' rows={3} className='w-full p-2 font-extralight col-span-4 border border-black '></textarea>
@@ -173,7 +173,7 @@ export default function Page() {
           <h1 className='text-4xl text-[#F19F1F] text-center'>London,UK</h1>
           <p className='text-[#3F444D] text-center font-extralight'>Coming Soon<br />
             <br />
-            </p>
+          </p>
           <div className='flex justify-center w-full'>
             <button className='bg-[#F19F1F] p-2 w-fit'>Get Directions</button>
           </div>
