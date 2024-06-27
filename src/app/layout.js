@@ -15,7 +15,7 @@ export default function Layout({ children }) {
       <body className="bg-white">
         <ContactNavbar></ContactNavbar>
         <Navbar />
-        {children}
+          {children}
         <Footer />
         <ToastContainer position='top-right' autoClose={3000} hideProgressBar={false} />
       </body>

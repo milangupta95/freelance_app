@@ -71,7 +71,7 @@ export const Footer = () => {
                 </div>
 
                 <div className='bg-[#343A40] p-4 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left space-y-4 lg:space-y-0'>
-                    <p>© 2024 Intelli Vectra Technologies Pvt. Ltd. All rights reserved.</p>
+                    <p className="text-white">© 2024 Intelli Vectra Technologies Pvt. Ltd. All rights reserved.</p>
                     <ul className='flex list-style-none items-center space-x-4'>
                         <li>Terms</li>
                         <li>Privacy</li>

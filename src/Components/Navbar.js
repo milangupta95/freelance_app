@@ -72,8 +72,6 @@ export const Navbar = () => {
                         <Link href="/contactus"><li className={`${pathname === '/contactus' ? classActive : classUnActive}`}>Contact Us</li></Link>
                     </ul>
                 </div>
-
-
             </div>
             <div className={`transition-all md:transition-none duration-1000 transform ${showContentInner ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} bg-white z-[100] text-black md:w-fit w-[50%] absolute md:top-10 top-[310px] md:shadow-lg bg-clip-padding backdrop-filter backdrop-blur-sm  bg-opacity-90 md:bg-opacity-100 md:right-40 right-0 md:rounded-lg p-4`}>
                 <ul className="space-y-4">

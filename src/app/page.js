@@ -127,16 +127,9 @@ export default function Home() {
   const classActive = "border-b-2 md:px-6 border-[#FFAB2E] h-full items-center cursor-pointer flex";
   const classUnactive = "cursor-pointer md:px-6 h-full items-center flex hover:border-b-2 hover:border-[#FFAB2E]"
   return (
-    <div className="h-min-[100vh] space-y-[40px] md:space-y-[60px] bg-white">
-      {
-        // Starter Layout
-      }
+    <div className="h-min-[100vh] w-full space-y-[40px] md:space-y-[60px] bg-white">
       <PageStarter tit1={"BUSINESS"} imageSrc={"images/frontpageimage.jpg"} tit2={" & ENTERPRISE HUB"} tit1Col={"#F19F1F"} desc={"Empowering businesses with agile, transparent, and innovative technology solutions, Intelli Vectra Technologies drives success through collaboration and passionate expertise."} descColor={"white"} />
-      {
-        // About Layout
-      }
-
-      <div className="w-full px-10 md:space-x-20 bg-white text-black justify-center items-center flex md:flex-row flex-col">
+      <div className="w-[100vw] px-10 md:space-x-20 bg-white text-black justify-center items-center flex md:flex-row flex-col">
         <div className="flex md:w-[40%] w-full">
           {/* First Image */}
           <div className="w-full max-w-sm">

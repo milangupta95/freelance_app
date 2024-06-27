@@ -46,9 +46,8 @@ export default function Page() {
     const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
     return (
-        <div className='space-y-[30px] bg-white'>
+        <div className='space-y-[30px] w-full bg-white'>
             <PageStarter tit1Col={"black"} tit1={"About"} tit2={" Us"} imageSrc={"/images/banners/aboutusbanner.jpg"} descColor={"black"} desc={"Intelli Vectra Technologies drives digital transformation with cutting-edge IT solutions. We simplify complexities, ensuring operational efficiency and growth. Committed to excellence and customer-centricity, we foster collaboration and innovation to help businesses thrive in a rapidly evolving digital landscape."} />
-
             <div className="w-full px-4 md:px-10 lg:px-20 space-y-6 bg-white text-black flex flex-col lg:flex-row items-center justify-center md:space-x-20">
                 <div className="relative w-full lg:w-[40%] h-[300px] lg:h-[600px]">
                     <Image
