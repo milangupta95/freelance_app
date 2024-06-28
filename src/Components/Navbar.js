@@ -68,7 +68,7 @@ export const Navbar = () => {
                             console.log()
                         }
                         }><li className={`${pathname === '/contenthub' ? classActive : classUnActive}`}>Content Hub<span><IoIosArrowDown /></span></li></button>
-                        <Link href="/carrers"><li className={`${pathname === '/carrers' ? classActive : classUnActive}`}>Carrers</li></Link>
+                        <Link href="/carrers"><li className={`${pathname === '/carrers' ? classActive : classUnActive}`}>Career</li></Link>
                         <Link href="/contactus"><li className={`${pathname === '/contactus' ? classActive : classUnActive}`}>Contact Us</li></Link>
                     </ul>
                 </div>

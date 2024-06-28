@@ -55,10 +55,10 @@ export const Footer = () => {
                     <div className='space-y-2 text-center lg:text-left'>
                         <h1 className='text-[#FFAB2E] font-bold'>Contact Us</h1>
                         <ul className='list-style-none space-y-2'>
-                            <li className='flex justify-center lg:justify-start space-x-4 items-center'><CiPhone />+91-012-4496-0635</li>
-                            <li className='flex justify-center lg:justify-start space-x-4 items-center'><MdOutlineEmail />info@intellivectra.tech</li>
-                            <li className='flex justify-center items-start lg:justify-start'>
-                                <CiLocationOn />
+                            <li className='flex justify-center lg:justify-start space-x-[5px] items-center'><span><CiPhone /></span><span>+91-012-4496-0635</span></li>
+                            <li className='flex justify-center lg:justify-start space-x-[5px] items-center'><span><MdOutlineEmail /></span><span>info@intellivectra.tech</span></li>
+                            <li className='flex justify-center items-start lg:justify-start space-x-1'>
+                                <span><CiLocationOn /></span>
                                 <span className="mt-[-5px]">
                                     2nd Floor, Plot no. 29,<br />
                                     Maruti Industrial Area,<br />

@@ -81,7 +81,7 @@ const EmblaCarousel = (props) => {
                         onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
                         disabled={prevBtnDisabled}
                     /></div>
-                    <div className="border-t-2 relative border-white w-[98%] px-4" >
+                    <div className="border-t-2 relative border-white w-[80vw] px-4" >
                         <div style={{position: 'absolute',left: `${posi[posIdx]}%`}}>
                             <BiDownArrow fontSize={28} />
                             <p>{years[posIdx]}</p>

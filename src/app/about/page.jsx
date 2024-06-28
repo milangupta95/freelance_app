@@ -3,7 +3,7 @@ import { PageStarter } from "@/Components/PageStarter";
 import Image from "next/image";
 import { Button } from "@/Components/ui/Button";
 import EmblaCarousel from "@/Components/Corousel/EmblaCarousel";
-
+import Link from "next/link";
 export default function Page() {
     const slides = [
         {
@@ -56,32 +56,32 @@ export default function Page() {
                         objectFit="cover"
                     />
                 </div>
-                <div className="h-full w-full lg:w-[50%] space-y-6">
-                    <h1 className="px-2 border-l-2 text-black text-[16px] font-bold border-[#F19F1F]">ABOUT US</h1>
-                    <h1 className="px-2 text-[#F19F1F] text-[36px]">Welcome to IVT</h1>
-                    <div>
-                        <p className="text-[16px] text-[#3F444D]">
-                            Welcome to Intelli Vectra Technologies! We are thrilled to have you here. As a leading IT solutions provider, we are dedicated to helping businesses harness the power of technology to drive digital transformation and simplify IT complexities. Our mission is to deliver innovative, tailored solutions that not only meet but exceed your expectations. With a commitment to excellence, integrity, and customer-centricity, we focus on fostering collaboration and continuous improvement. Our team of experts works tirelessly to ensure operational efficiency, enhanced security, and sustainable growth for our clients. At Intelli Vectra Technologies, we believe in the transformative potential of technology to create a brighter, more connected future for all. Together, let us shape the future of your business.
-                        </p>
+                <div className="h-full items-center md:w-[50%] w-full space-y-6">
+                    <h1 className="px-2 border-l-2 text-black text-[20px] font-bold border-[#F19F1F]">ABOUT US</h1>
+                    <p className="text-[#F19F1F] md:text-4xl text-2xl tracking-wide">Welcome to IVT</p>
 
-                    </div>
-                    <Button buttonText={"Learn More"} />
+                    <p className="md:text-[18px] text-normal text-[#3F444]">
+                    Welcome to Intelli Vectra Technologies! We are thrilled to have you here. As a leading IT solutions provider, we are dedicated to helping businesses harness the power of technology to drive digital transformation and simplify IT complexities. Our mission is to deliver innovative, tailored solutions that not only meet but exceed your expectations. With a commitment to excellence, integrity, and customer-centricity, we focus on fostering collaboration and continuous improvement. Our team of experts works tirelessly to ensure operational efficiency, enhanced security, and sustainable growth for our clients. At Intelli Vectra Technologies, we believe in the transformative potential of technology to create a brighter, more connected future for all. Together, let us shape the future of your business.
+                    </p>
+                    <div className="w-full h-6 bg-white"></div>
+                    <Link href="/about"><Button buttonText={"Learn More"} /></Link>
                 </div>
+                
             </div>
 
             <div className="bg-[#FFFAF2] w-full p-4 md:p-16">
                 <div className="h-fit md:h-[70vh] space-y-8 md:space-y-16 bg-[#F19F1F] bg-blend-darken p-4" style={{ backgroundImage: "url('images/business-network-background-connecting-dots-technology-design 2.png')" }}>
                     <div className='space-y-2'>
-                        <h1 className="text-center text-black text-2xl md:text-4xl font-extralight"><span className="text-white">Our</span> Journey</h1>
-                        <p className="text-center text-[#3F444D] font-extralight">Embark on a seamless journey with our IT services.</p>
+                        <h1 className="text-center font-bold text-black text-2xl md:text-4xl"><span className="text-white">Our</span> Journey</h1>
+                        <p className="text-center text-white text-xl font-bold">Embark on a seamless journey with our IT services.</p>
                     </div>
                     <EmblaCarousel posi={posi} years={years} slides={slides} options={OPTIONS} />
                 </div>
             </div>
 
             <div className="p-4 md:p-8 bg-white space-y-4 flex flex-col items-center">
-                <h1 className="text-center text-4xl text-black">Our <span className="text-[#F19F1F]">Process</span></h1>
-                <div className="text-center text-black tracking-wider text-lg font-serif font-extralight">
+                <h1 className="text-center text-4xl font-bold text-black">Our <span className="text-[#F19F1F]">Process</span></h1>
+                <div className="text-center text-black tracking-wider text-lg font-extralight">
                     <p>Streamlined Solutions for Seamless IT Services Tailored to</p>
                     <p>Your Business Needs</p>
                 </div>
@@ -94,8 +94,8 @@ export default function Page() {
 
 
             <div className="p-8 bg-[#FFFAF1] w-[100%] text-black space-y-4">
-                <h1 className="font-semibold text-center text-4xl"><span className="text-[#F19F1F]">Our </span>Approach</h1>
-                <div className="text-center tracking-widest font-extralight ">
+                <h1 className="font-bold text-center text-4xl"><span className="text-[#F19F1F]">Our </span>Approach</h1>
+                <div className="text-center tracking-wider text-lg font-extralight">
                     <p>At IVT, We love technology - But we are obsessed with</p>
                     <p>Your Success</p>
                 </div>
@@ -129,9 +129,8 @@ export default function Page() {
 
             </div>
 
-            <div className="h-[8vh] bg-white"></div>
             <div className="bg-white text-black space-y-6 p-4">
-                <h1 className="text-center font-normal text-4xl"><span className="text-[#F19F1F]">Mission </span>And Vision</h1>
+                <h1 className="text-center font-bold text-4xl"><span className="text-[#F19F1F]">Mission </span>& Vision</h1>
 
                 <div className="space-x-0  md:space-x-2 space-y-4 md:space-y-0 flex flex-col md:flex-row">
                     <div className="p-4 md:p-16 bg-[#FFFAF2] w-full md:w-[50%] space-y-4 md:space-y-6">

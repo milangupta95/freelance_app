@@ -11,7 +11,7 @@ export default function Page() {
 
     return (
         <div>
-            <PageStarter tit1={"Carrer"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/banners/carrerpagebanner.jpg"} desc={" Join Intelli Vectra Technology and be part of a dynamic team driving digital innovation. Explore rewarding career opportunities where your skills and ideas can shape the future of technology solutions."}/>
+            <PageStarter tit1={"Career"} tit1Col={"white"} tit2={""} descColor={"white"} imageSrc={"/images/banners/carrerpagebanner.jpg"} desc={" Join Intelli Vectra Technology and be part of a dynamic team driving digital innovation. Explore rewarding career opportunities where your skills and ideas can shape the future of technology solutions."}/>
             <div className="h-[5vh] bg-white"></div>
 
             <div className="flex flex-col w-[100vw] justify-center items-center space-y-4 bg-white">
